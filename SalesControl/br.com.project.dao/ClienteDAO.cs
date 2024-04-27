@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Mysqlx;
 using SalesControl.br.com.project.connection;
 using SalesControl.br.com.project.model;
 
@@ -14,6 +16,7 @@ namespace SalesControl.br.com.project.dao
     public class ClienteDAO
     {
         private MySqlConnection conexao;
+
 
         public ClienteDAO()
         {
@@ -57,5 +60,31 @@ namespace SalesControl.br.com.project.dao
         }
         #endregion
 
+        #region
+        public DataTable listarCliente()
+        {
+            try
+            {
+                // Criar DataTAble e o comando sql
+                DataTable tabelacliente = new DataTable();
+                string sql = "select * from tb_clientes";
+
+                // Organizar o comando sql e executar 
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                // criar o MySqlDataApter para preencher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);
+                return tabelacliente;
+            }
+            catch (Exception erro)
+{
+                MessageBox.Show("Erro ao executar o comando sql" + erro);
+                return null;
+            }
+        }
+            #endregion
     }
 }

@@ -119,5 +119,31 @@ namespace SalesControl.br.com.project.view
             ClienteDAO dao = new ClienteDAO();
             dao.cadastrarCliente(obj);
         }
+
+        private void FrmClientes_Load(object sender, EventArgs e)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            tabelaCliente.DataSource = dao.listarCliente();
+        }
+
+        private void tabelaCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
