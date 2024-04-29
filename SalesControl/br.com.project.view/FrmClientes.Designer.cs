@@ -85,7 +85,7 @@ namespace SalesControl.br.com.project.view
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1044, 69);
+            this.panel1.Size = new System.Drawing.Size(668, 69);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -106,10 +106,10 @@ namespace SalesControl.br.com.project.view
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.txtpesquisa);
             this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Location = new System.Drawing.Point(4, 33);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(999, 425);
+            this.tabPage2.Size = new System.Drawing.Size(636, 361);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -124,8 +124,9 @@ namespace SalesControl.br.com.project.view
             this.tabelaCliente.Location = new System.Drawing.Point(3, 105);
             this.tabelaCliente.Name = "tabelaCliente";
             this.tabelaCliente.ReadOnly = true;
-            this.tabelaCliente.Size = new System.Drawing.Size(990, 314);
+            this.tabelaCliente.Size = new System.Drawing.Size(637, 205);
             this.tabelaCliente.TabIndex = 49;
+            this.tabelaCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCliente_CellClick);
             this.tabelaCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCliente_CellContentClick);
             // 
             // btnpesquisar
@@ -145,7 +146,7 @@ namespace SalesControl.br.com.project.view
             // 
             this.txtpesquisa.Location = new System.Drawing.Point(100, 42);
             this.txtpesquisa.Name = "txtpesquisa";
-            this.txtpesquisa.Size = new System.Drawing.Size(340, 33);
+            this.txtpesquisa.Size = new System.Drawing.Size(340, 23);
             this.txtpesquisa.TabIndex = 47;
             this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
@@ -190,14 +191,15 @@ namespace SalesControl.br.com.project.view
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.txtbairro);
             this.tabPage1.Controls.Add(this.label23);
-            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
+            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(999, 425);
+            this.tabPage1.Size = new System.Drawing.Size(636, 361);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastrar Clientes";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // cbuf
             // 
@@ -230,198 +232,207 @@ namespace SalesControl.br.com.project.view
             "SP",
             "SE",
             "TO"});
-            this.cbuf.Location = new System.Drawing.Point(708, 162);
+            this.cbuf.Location = new System.Drawing.Point(57, 300);
             this.cbuf.Name = "cbuf";
-            this.cbuf.Size = new System.Drawing.Size(121, 29);
+            this.cbuf.Size = new System.Drawing.Size(121, 25);
             this.cbuf.TabIndex = 51;
             this.cbuf.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(614, 72);
+            this.label4.Location = new System.Drawing.Point(3, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
+            this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 50;
             this.label4.Text = "Bairro:";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(614, 115);
+            this.label3.Location = new System.Drawing.Point(177, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 49;
             this.label3.Text = "Cidade:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(635, 163);
+            this.label2.Location = new System.Drawing.Point(12, 303);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 21);
+            this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 48;
             this.label2.Text = "UF:";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // txtendereco
             // 
-            this.txtendereco.Location = new System.Drawing.Point(102, 299);
+            this.txtendereco.Location = new System.Drawing.Point(279, 170);
             this.txtendereco.Name = "txtendereco";
-            this.txtendereco.Size = new System.Drawing.Size(340, 27);
+            this.txtendereco.Size = new System.Drawing.Size(266, 23);
             this.txtendereco.TabIndex = 47;
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(85, 60);
+            this.txtnome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Location = new System.Drawing.Point(85, 57);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(448, 27);
+            this.txtnome.Size = new System.Drawing.Size(273, 23);
             this.txtnome.TabIndex = 36;
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(85, 194);
+            this.txtemail.Location = new System.Drawing.Point(85, 94);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(186, 27);
+            this.txtemail.Size = new System.Drawing.Size(273, 23);
             this.txtemail.TabIndex = 34;
             // 
             // txtnumero
             // 
-            this.txtnumero.Location = new System.Drawing.Point(495, 299);
+            this.txtnumero.Location = new System.Drawing.Point(465, 267);
             this.txtnumero.Name = "txtnumero";
-            this.txtnumero.Size = new System.Drawing.Size(89, 27);
+            this.txtnumero.Size = new System.Drawing.Size(54, 23);
             this.txtnumero.TabIndex = 32;
             // 
             // txtcidade
             // 
-            this.txtcidade.Location = new System.Drawing.Point(708, 115);
+            this.txtcidade.Location = new System.Drawing.Point(244, 261);
             this.txtcidade.Name = "txtcidade";
-            this.txtcidade.Size = new System.Drawing.Size(186, 27);
+            this.txtcidade.Size = new System.Drawing.Size(186, 23);
             this.txtcidade.TabIndex = 30;
             // 
             // txtcomplemento
             // 
-            this.txtcomplemento.Location = new System.Drawing.Point(139, 349);
+            this.txtcomplemento.Location = new System.Drawing.Point(115, 217);
             this.txtcomplemento.Name = "txtcomplemento";
-            this.txtcomplemento.Size = new System.Drawing.Size(303, 27);
+            this.txtcomplemento.Size = new System.Drawing.Size(303, 23);
             this.txtcomplemento.TabIndex = 28;
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(85, 19);
+            this.txtcodigo.Location = new System.Drawing.Point(85, 16);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(120, 27);
+            this.txtcodigo.Size = new System.Drawing.Size(120, 23);
             this.txtcodigo.TabIndex = 25;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label13.Location = new System.Drawing.Point(7, 305);
+            this.label13.Location = new System.Drawing.Point(200, 173);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 21);
+            this.label13.Size = new System.Drawing.Size(73, 17);
             this.label13.TabIndex = 46;
             this.label13.Text = "Endereço:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txttelefone
             // 
-            this.txttelefone.Location = new System.Drawing.Point(98, 245);
+            this.txttelefone.Location = new System.Drawing.Point(85, 130);
             this.txttelefone.Mask = "(##)####-####";
             this.txttelefone.Name = "txttelefone";
-            this.txttelefone.Size = new System.Drawing.Size(100, 27);
+            this.txttelefone.Size = new System.Drawing.Size(100, 23);
             this.txttelefone.TabIndex = 45;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.Location = new System.Drawing.Point(12, 255);
+            this.label14.Location = new System.Drawing.Point(6, 136);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 21);
+            this.label14.Size = new System.Drawing.Size(65, 17);
             this.label14.TabIndex = 44;
             this.label14.Text = "Telefone:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // txtcep
             // 
-            this.txtcep.Location = new System.Drawing.Point(495, 245);
+            this.txtcep.Location = new System.Drawing.Point(244, 133);
             this.txtcep.Mask = "##.###.###-#";
             this.txtcep.Name = "txtcep";
-            this.txtcep.Size = new System.Drawing.Size(89, 27);
+            this.txtcep.Size = new System.Drawing.Size(89, 23);
             this.txtcep.TabIndex = 43;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Location = new System.Drawing.Point(444, 251);
+            this.label15.Location = new System.Drawing.Point(200, 136);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 21);
+            this.label15.Size = new System.Drawing.Size(38, 17);
             this.label15.TabIndex = 42;
             this.label15.Text = "CEP:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // txtcelular
             // 
-            this.txtcelular.Location = new System.Drawing.Point(289, 245);
+            this.txtcelular.Location = new System.Drawing.Point(85, 170);
             this.txtcelular.Mask = "(##)# ####-####";
             this.txtcelular.Name = "txtcelular";
-            this.txtcelular.Size = new System.Drawing.Size(100, 27);
+            this.txtcelular.Size = new System.Drawing.Size(100, 23);
             this.txtcelular.TabIndex = 41;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label16.Location = new System.Drawing.Point(204, 251);
+            this.label16.Location = new System.Drawing.Point(1, 170);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 21);
+            this.label16.Size = new System.Drawing.Size(58, 17);
             this.label16.TabIndex = 40;
             this.label16.Text = "Celular:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // txtcpf
             // 
-            this.txtcpf.Location = new System.Drawing.Point(85, 151);
-            this.txtcpf.Mask = "##.###.###-#";
+            this.txtcpf.Location = new System.Drawing.Point(401, 94);
+            this.txtcpf.Mask = "###.###.###-##";
             this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(100, 27);
+            this.txtcpf.Size = new System.Drawing.Size(100, 23);
             this.txtcpf.TabIndex = 39;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label17.Location = new System.Drawing.Point(7, 151);
+            this.label17.Location = new System.Drawing.Point(364, 97);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 21);
+            this.label17.Size = new System.Drawing.Size(37, 17);
             this.label17.TabIndex = 38;
             this.label17.Text = "CPF:";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // txtrg
             // 
-            this.txtrg.Location = new System.Drawing.Point(85, 103);
+            this.txtrg.Location = new System.Drawing.Point(401, 60);
             this.txtrg.Mask = "##.###.###-#";
             this.txtrg.Name = "txtrg";
-            this.txtrg.Size = new System.Drawing.Size(100, 27);
+            this.txtrg.Size = new System.Drawing.Size(100, 23);
             this.txtrg.TabIndex = 37;
+            this.txtrg.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtrg_MaskInputRejected);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label18.Location = new System.Drawing.Point(7, 63);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 21);
+            this.label18.Size = new System.Drawing.Size(52, 17);
             this.label18.TabIndex = 35;
             this.label18.Text = "Nome:";
             this.label18.Click += new System.EventHandler(this.label18_Click);
@@ -429,62 +440,66 @@ namespace SalesControl.br.com.project.view
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label19.Location = new System.Drawing.Point(4, 200);
+            this.label19.Location = new System.Drawing.Point(6, 103);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 21);
+            this.label19.Size = new System.Drawing.Size(51, 17);
             this.label19.TabIndex = 33;
             this.label19.Text = "E-mail:";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label20.Location = new System.Drawing.Point(13, 106);
+            this.label20.Location = new System.Drawing.Point(364, 63);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(38, 21);
+            this.label20.Size = new System.Drawing.Size(31, 17);
             this.label20.TabIndex = 31;
             this.label20.Text = "RG:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label21.Location = new System.Drawing.Point(461, 305);
+            this.label21.Location = new System.Drawing.Point(436, 267);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(28, 21);
+            this.label21.Size = new System.Drawing.Size(23, 17);
             this.label21.TabIndex = 29;
             this.label21.Text = "N°";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label22.Location = new System.Drawing.Point(12, 355);
+            this.label22.Location = new System.Drawing.Point(1, 217);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(128, 21);
+            this.label22.Size = new System.Drawing.Size(108, 17);
             this.label22.TabIndex = 27;
             this.label22.Text = "Complemento:";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // txtbairro
             // 
-            this.txtbairro.Location = new System.Drawing.Point(708, 66);
+            this.txtbairro.Location = new System.Drawing.Point(57, 261);
             this.txtbairro.Name = "txtbairro";
-            this.txtbairro.Size = new System.Drawing.Size(100, 27);
+            this.txtbairro.Size = new System.Drawing.Size(100, 23);
             this.txtbairro.TabIndex = 26;
+            this.txtbairro.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtbairro_MaskInputRejected);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label23.Location = new System.Drawing.Point(7, 22);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(72, 21);
+            this.label23.Size = new System.Drawing.Size(62, 17);
             this.label23.TabIndex = 24;
             this.label23.Text = "Código:";
             this.label23.Click += new System.EventHandler(this.label23_Click);
@@ -493,11 +508,11 @@ namespace SalesControl.br.com.project.view
             // 
             this.tabClientes.Controls.Add(this.tabPage1);
             this.tabClientes.Controls.Add(this.tabPage2);
-            this.tabClientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabClientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabClientes.Location = new System.Drawing.Point(12, 75);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.SelectedIndex = 0;
-            this.tabClientes.Size = new System.Drawing.Size(1007, 462);
+            this.tabClientes.Size = new System.Drawing.Size(644, 391);
             this.tabClientes.TabIndex = 1;
             // 
             // btneditar
@@ -505,31 +520,33 @@ namespace SalesControl.br.com.project.view
             this.btneditar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btneditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(898, 543);
+            this.btneditar.Location = new System.Drawing.Point(539, 491);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(95, 39);
             this.btneditar.TabIndex = 49;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnexcluir
             // 
             this.btnexcluir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnexcluir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnexcluir.ForeColor = System.Drawing.Color.White;
-            this.btnexcluir.Location = new System.Drawing.Point(781, 543);
+            this.btnexcluir.Location = new System.Drawing.Point(422, 491);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(95, 39);
             this.btnexcluir.TabIndex = 50;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = false;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnsalvar
             // 
             this.btnsalvar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnsalvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.ForeColor = System.Drawing.Color.White;
-            this.btnsalvar.Location = new System.Drawing.Point(658, 543);
+            this.btnsalvar.Location = new System.Drawing.Point(299, 491);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(95, 39);
             this.btnsalvar.TabIndex = 51;
@@ -542,7 +559,7 @@ namespace SalesControl.br.com.project.view
             this.btnnovo.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnnovo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnovo.ForeColor = System.Drawing.Color.White;
-            this.btnnovo.Location = new System.Drawing.Point(546, 543);
+            this.btnnovo.Location = new System.Drawing.Point(187, 491);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(95, 39);
             this.btnnovo.TabIndex = 52;
@@ -553,7 +570,7 @@ namespace SalesControl.br.com.project.view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 609);
+            this.ClientSize = new System.Drawing.Size(668, 536);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnexcluir);
