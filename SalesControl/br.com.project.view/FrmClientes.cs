@@ -146,9 +146,19 @@ namespace SalesControl.br.com.project.view
 
         }
 
-        private void btnpesquisar_Click(object sender, EventArgs e)
+        private void btnpesquisar_Click(object sende, EventArgs e)
         {
+            // Botão pesquisar
+            string nome = txtpesquisa.Text;
 
+            ClienteDAO dao = new ClienteDAO();
+
+            tabelaCliente.DataSource = dao.listarClientePorNome(nome);
+
+            if(tabelaCliente.Rows.Count == 0)
+            {
+                tabelaCliente.DataSource = dao.listarCliente();
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -280,5 +290,72 @@ namespace SalesControl.br.com.project.view
             //Recarregar o datagridview
             tabelaCliente.DataSource = dao.listarCliente();
         }
+
+        private void txtpesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            ClienteDAO dao = new ClienteDAO();
+
+            tabelaCliente.DataSource = dao.listarClientePorNome(nome);
+
+            
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            //Botão consultar CEP
+            try
+            {
+                string cep = txtcep.Text;
+                string xml = "https://viacep.com.br/ws/"+cep+"/xml/";
+
+                DataSet dados = new DataSet();
+                dados.ReadXml(xml);
+
+                txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+                txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                cbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Endereço não encontrado, por favor digite manualmente");
+            }
+        }
+
+        private void txtcidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtendereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnnovo_Click(object sender, EventArgs e)
+        {
+            new Helpers().Limpartela(this);
+        }
+
+        private void txtcpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtpesquisa_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }

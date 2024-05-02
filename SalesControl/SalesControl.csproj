@@ -101,11 +101,18 @@
     <Compile Include="br.com.project.connection\ConnectionFactory.cs" />
     <Compile Include="br.com.project.dao\ClienteDAO.cs" />
     <Compile Include="br.com.project.model\Cliente.cs" />
+    <Compile Include="br.com.project.model\Helpers.cs" />
     <Compile Include="br.com.project.view\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.project.view\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.project.view\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.project.view\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -117,6 +124,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="br.com.project.view\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.project.view\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

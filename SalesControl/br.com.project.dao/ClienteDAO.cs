@@ -61,6 +61,7 @@ namespace SalesControl.br.com.project.dao
             
         }
         #endregion
+
         
         #region AlterarCliente
         public void alterarCliente(Cliente obj)
@@ -109,6 +110,7 @@ namespace SalesControl.br.com.project.dao
 
         #endregion alterarCliente
 
+
         #region ExcluirCliente
         public void excluirCliente(Cliente obj)
         {
@@ -139,7 +141,8 @@ namespace SalesControl.br.com.project.dao
 
         #endregion ExcluirCliente
 
-        #region listarCliente
+
+        #region BuscarCliente
         public DataTable listarCliente()
         {
             try
@@ -166,8 +169,43 @@ namespace SalesControl.br.com.project.dao
                 return null;
             }
         }
+
+
         #endregion listarCliente
 
-     
+
+        #region listarClientePorNome
+        public DataTable listarClientePorNome(string nome)
+        {
+            try
+            {
+                // Criar DataTAble e o comando sql
+                DataTable tabelacliente = new DataTable();
+                string sql = "select * from tb_clientes where nome like @nome";
+
+                // Organizar o comando sql e executar 
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                // criar o MySqlDataApter para preencher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);
+                conexao.Close();
+                return tabelacliente;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql" + erro);
+                return null;
+            }
+        }
+
+        #endregion
+
     }
 }
