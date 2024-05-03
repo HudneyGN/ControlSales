@@ -100,7 +100,9 @@
   <ItemGroup>
     <Compile Include="br.com.project.connection\ConnectionFactory.cs" />
     <Compile Include="br.com.project.dao\ClienteDAO.cs" />
+    <Compile Include="br.com.project.dao\FuncionarioDAO.cs" />
     <Compile Include="br.com.project.model\Cliente.cs" />
+    <Compile Include="br.com.project.model\Funcionario.cs" />
     <Compile Include="br.com.project.model\Helpers.cs" />
     <Compile Include="br.com.project.view\FrmClientes.cs">
       <SubType>Form</SubType>
