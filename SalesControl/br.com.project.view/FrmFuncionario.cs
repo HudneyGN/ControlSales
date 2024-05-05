@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SalesControl.br.com.project.dao;
+using SalesControl.br.com.project.model;
+using SalesControl.br.com.project.connection;
+using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace SalesControl.br.com.project.view
 {
@@ -164,6 +169,31 @@ namespace SalesControl.br.com.project.view
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
+            //Botão salvar
+            Funcionario obj = new Funcionario();
+
+            //Receber os dados dos campos 
+            obj.nome = txtnome.Text;
+            obj.rg = txtrg.Text;
+            obj.cpf = txtcpf.Text;
+            obj.email = txtemail.Text;
+            obj.senha = txtsenha.Text;
+            obj.nivelAcesso = cbnivel.SelectedItem.ToString();
+            obj.telefone = txttelefone.Text;
+            obj.celular = txtcelular.Text;
+            obj.cep = txtcep.Text;
+            obj.endereco = txtendereco.Text;
+            obj.numero = Convert.ToInt32(txtnumero.Text);
+            obj.complemento = txtcomplemento.Text;
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.cbuf = cbuf.Text;
+            obj.cargo = cbcargo.SelectedItem.ToString();
+
+            //Criar o objeto funcionarioDAO
+            FuncionarioDAO dao = new FuncionarioDAO();
+
+            dao.cadastrarFuncionario(obj);
 
         }
 
@@ -184,6 +214,23 @@ namespace SalesControl.br.com.project.view
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void tabelaFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmFuncionarios_Load(object sender, EventArgs e)
+        {
+            FuncionarioDAO dao = new FuncionarioDAO();
+            tabelaFuncionario.DataSource = dao.listarFuncionarios();
 
         }
     }

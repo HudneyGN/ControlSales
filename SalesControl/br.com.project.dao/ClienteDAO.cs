@@ -30,7 +30,7 @@ namespace SalesControl.br.com.project.dao
             {
                 // definir o cmd sql - insert into
                 string sql = @"insert into tb_clientes (nome,rg,cpf,email,telefone,celular,cep,endereco,numero,complemento,bairro,cidade,estado)
-                                values (@nome,@rg,@cpf,@email,@telefone,@celular,@cep,@endereco,@numero,@complemento,@bairro,@cidade,@estado)";                // - organizar o comando
+                                values (@nome,@rg,@cpf,@email,@telefone,@celular,@cep,@endereco,@numero,@complemento,@bairro,@cidade,@estado)";
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue(@"nome", obj.nome);
                 executacmd.Parameters.AddWithValue(@"rg", obj.rg);
@@ -56,7 +56,7 @@ namespace SalesControl.br.com.project.dao
             catch (Exception erro)
             {
 
-                MessageBox.Show("Erro ao cdastrar cliente: " + erro);
+                MessageBox.Show("Erro ao cadastrar cliente: " + erro);
             }
             
         }

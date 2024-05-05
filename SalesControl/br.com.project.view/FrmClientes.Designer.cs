@@ -37,6 +37,8 @@ namespace SalesControl.br.com.project.view
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtcomplemento = new System.Windows.Forms.TextBox();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.cbuf = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@ namespace SalesControl.br.com.project.view
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtcomplemento = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaCliente)).BeginInit();
@@ -211,6 +211,25 @@ namespace SalesControl.br.com.project.view
             this.tabPage1.Text = "Cadastrar Clientes";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label5.Location = new System.Drawing.Point(2, 366);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 17);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Complemento:";
+            // 
+            // txtcomplemento
+            // 
+            this.txtcomplemento.Location = new System.Drawing.Point(119, 363);
+            this.txtcomplemento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcomplemento.Name = "txtcomplemento";
+            this.txtcomplemento.Size = new System.Drawing.Size(377, 23);
+            this.txtcomplemento.TabIndex = 54;
             // 
             // btnbuscar
             // 
@@ -606,25 +625,6 @@ namespace SalesControl.br.com.project.view
             this.btnnovo.Text = "Novo";
             this.btnnovo.UseVisualStyleBackColor = false;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(2, 366);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 17);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Complemento:";
-            // 
-            // txtcomplemento
-            // 
-            this.txtcomplemento.Location = new System.Drawing.Point(119, 363);
-            this.txtcomplemento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtcomplemento.Name = "txtcomplemento";
-            this.txtcomplemento.Size = new System.Drawing.Size(377, 23);
-            this.txtcomplemento.TabIndex = 54;
             // 
             // FrmClientes
             // 

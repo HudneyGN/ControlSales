@@ -37,6 +37,14 @@ namespace SalesControl.br.com.project.view
             this.btneditar = new System.Windows.Forms.Button();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtcomplemento = new System.Windows.Forms.TextBox();
+            this.cbnivel = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbcargo = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtsenha = new System.Windows.Forms.TextBox();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.cbuf = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,14 +78,6 @@ namespace SalesControl.br.com.project.view
             this.btnpesquisar = new System.Windows.Forms.Button();
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtsenha = new System.Windows.Forms.TextBox();
-            this.cbcargo = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbnivel = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtcomplemento = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -224,6 +224,98 @@ namespace SalesControl.br.com.project.view
             this.tabPage1.Text = "Cadastrar Funcionários";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label8.Location = new System.Drawing.Point(6, 386);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 17);
+            this.label8.TabIndex = 61;
+            this.label8.Text = "Complemento:";
+            // 
+            // txtcomplemento
+            // 
+            this.txtcomplemento.Location = new System.Drawing.Point(123, 383);
+            this.txtcomplemento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcomplemento.Name = "txtcomplemento";
+            this.txtcomplemento.Size = new System.Drawing.Size(363, 23);
+            this.txtcomplemento.TabIndex = 60;
+            // 
+            // cbnivel
+            // 
+            this.cbnivel.FormattingEnabled = true;
+            this.cbnivel.Items.AddRange(new object[] {
+            "administrador",
+            "Usuário"});
+            this.cbnivel.Location = new System.Drawing.Point(630, 123);
+            this.cbnivel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbnivel.Name = "cbnivel";
+            this.cbnivel.Size = new System.Drawing.Size(200, 25);
+            this.cbnivel.TabIndex = 59;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label7.Location = new System.Drawing.Point(570, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 17);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "Nível:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // cbcargo
+            // 
+            this.cbcargo.FormattingEnabled = true;
+            this.cbcargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Analista de Recrutamento e Seleção",
+            "Gestor de Contas",
+            "Gestor de Produção",
+            "Aumoxarife",
+            "Auxiliar de produção",
+            "Estagiário"});
+            this.cbcargo.Location = new System.Drawing.Point(630, 341);
+            this.cbcargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbcargo.Name = "cbcargo";
+            this.cbcargo.Size = new System.Drawing.Size(265, 25);
+            this.cbcargo.TabIndex = 57;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(560, 347);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 17);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Cargo:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label5.Location = new System.Drawing.Point(573, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Senha:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtsenha
+            // 
+            this.txtsenha.Location = new System.Drawing.Point(630, 67);
+            this.txtsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtsenha.Name = "txtsenha";
+            this.txtsenha.Size = new System.Drawing.Size(200, 23);
+            this.txtsenha.TabIndex = 54;
             // 
             // btnbuscar
             // 
@@ -545,10 +637,11 @@ namespace SalesControl.br.com.project.view
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(953, 452);
+            this.tabPage2.Size = new System.Drawing.Size(953, 409);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tabelaFuncionario
             // 
@@ -562,6 +655,7 @@ namespace SalesControl.br.com.project.view
             this.tabelaFuncionario.ReadOnly = true;
             this.tabelaFuncionario.Size = new System.Drawing.Size(936, 252);
             this.tabelaFuncionario.TabIndex = 49;
+            this.tabelaFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellContentClick);
             // 
             // btnpesquisar
             // 
@@ -596,98 +690,6 @@ namespace SalesControl.br.com.project.view
             this.label12.TabIndex = 46;
             this.label12.Text = "Nome:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(573, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Senha:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // txtsenha
-            // 
-            this.txtsenha.Location = new System.Drawing.Point(630, 67);
-            this.txtsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtsenha.Name = "txtsenha";
-            this.txtsenha.Size = new System.Drawing.Size(200, 23);
-            this.txtsenha.TabIndex = 54;
-            // 
-            // cbcargo
-            // 
-            this.cbcargo.FormattingEnabled = true;
-            this.cbcargo.Items.AddRange(new object[] {
-            "Gerente",
-            "Analista de Recrutamento e Seleção",
-            "Gestor de Contas",
-            "Gestor de Produção",
-            "Aumoxarife",
-            "Auxiliar de produção",
-            "Estagiário"});
-            this.cbcargo.Location = new System.Drawing.Point(630, 341);
-            this.cbcargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbcargo.Name = "cbcargo";
-            this.cbcargo.Size = new System.Drawing.Size(265, 25);
-            this.cbcargo.TabIndex = 57;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(560, 347);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 17);
-            this.label6.TabIndex = 56;
-            this.label6.Text = "Cargo:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // cbnivel
-            // 
-            this.cbnivel.FormattingEnabled = true;
-            this.cbnivel.Items.AddRange(new object[] {
-            "administrador",
-            "Usuário"});
-            this.cbnivel.Location = new System.Drawing.Point(630, 123);
-            this.cbnivel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbnivel.Name = "cbnivel";
-            this.cbnivel.Size = new System.Drawing.Size(200, 25);
-            this.cbnivel.TabIndex = 59;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label7.Location = new System.Drawing.Point(570, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 17);
-            this.label7.TabIndex = 58;
-            this.label7.Text = "Nível:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label8.Location = new System.Drawing.Point(6, 386);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 17);
-            this.label8.TabIndex = 61;
-            this.label8.Text = "Complemento:";
-            // 
-            // txtcomplemento
-            // 
-            this.txtcomplemento.Location = new System.Drawing.Point(123, 383);
-            this.txtcomplemento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtcomplemento.Name = "txtcomplemento";
-            this.txtcomplemento.Size = new System.Drawing.Size(363, 23);
-            this.txtcomplemento.TabIndex = 60;
-            // 
             // FrmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -703,6 +705,7 @@ namespace SalesControl.br.com.project.view
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmFuncionarios";
             this.Text = "Cadastro de Funcionários";
+            this.Load += new System.EventHandler(this.FrmFuncionarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabClientes.ResumeLayout(false);
