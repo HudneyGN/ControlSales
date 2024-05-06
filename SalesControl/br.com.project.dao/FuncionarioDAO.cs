@@ -29,7 +29,7 @@ namespace SalesControl.br.com.project.dao
                 // criar o comando SQL
 
                 string sql = @"insert into tb_funcionarios (nome,rg,cpf,email,senha,cargo,nivel_acesso,telefone,celular,cep,endereco,numero,complemento,bairro,cidade,estado) 
-                                values (@nome,@rg,@cpf,@email,@senha,@nivel_acesso,@telefone,@celular,@cep,@endereco,@numero,@complemento,@bairro,@cidade,@estado)";
+                                values (@nome,@rg,@cpf,@email,@senha,@cargo,@nivel_acesso,@telefone,@celular,@cep,@endereco,@numero,@complemento,@bairro,@cidade,@estado)";
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue(@"nome", obj.nome);
                 executacmd.Parameters.AddWithValue(@"rg", obj.rg);
@@ -67,32 +67,7 @@ namespace SalesControl.br.com.project.dao
         #endregion
 
         #region Método ListarFuncionario
-        public DataTable listarCliente()
-        {
-            try
-            {
-                // Criar DataTAble e o comando sql
-                DataTable tabelacliente = new DataTable();
-                string sql = "select * from tb_clientes";
-
-                // Organizar o comando sql e executar 
-                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                conexao.Open();
-                executacmd.ExecuteNonQuery();
-
-                // criar o MySqlDataApter para preencher os dados no DataTable
-                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-                da.Fill(tabelacliente);
-                conexao.Close();
-                return tabelacliente;
-
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro ao executar o comando sql" + erro);
-                return null;
-            }
-        }
+      
         public DataTable listarFuncionarios()
         {
             try

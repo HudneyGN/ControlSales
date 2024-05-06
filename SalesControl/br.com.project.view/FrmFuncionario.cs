@@ -178,7 +178,7 @@ namespace SalesControl.br.com.project.view
             obj.cpf = txtcpf.Text;
             obj.email = txtemail.Text;
             obj.senha = txtsenha.Text;
-            obj.nivelAcesso = cbnivel.SelectedItem.ToString();
+            //obj.nivelAcesso = cbnivel.SelectedItem.ToString();
             obj.telefone = txttelefone.Text;
             obj.celular = txtcelular.Text;
             obj.cep = txtcep.Text;
