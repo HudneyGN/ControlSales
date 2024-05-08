@@ -35,7 +35,7 @@ namespace SalesControl.br.com.project.view
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
-            this.tabClientes = new System.Windows.Forms.TabControl();
+            this.tabFuncionario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.txtcomplemento = new System.Windows.Forms.TextBox();
@@ -79,7 +79,7 @@ namespace SalesControl.br.com.project.view
             this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.tabClientes.SuspendLayout();
+            this.tabFuncionario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFuncionario)).BeginInit();
@@ -164,17 +164,17 @@ namespace SalesControl.br.com.project.view
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
-            // tabClientes
+            // tabFuncionario
             // 
-            this.tabClientes.Controls.Add(this.tabPage1);
-            this.tabClientes.Controls.Add(this.tabPage2);
-            this.tabClientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabClientes.Location = new System.Drawing.Point(2, 93);
-            this.tabClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabClientes.Name = "tabClientes";
-            this.tabClientes.SelectedIndex = 0;
-            this.tabClientes.Size = new System.Drawing.Size(961, 482);
-            this.tabClientes.TabIndex = 57;
+            this.tabFuncionario.Controls.Add(this.tabPage1);
+            this.tabFuncionario.Controls.Add(this.tabPage2);
+            this.tabFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabFuncionario.Location = new System.Drawing.Point(2, 93);
+            this.tabFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabFuncionario.Name = "tabFuncionario";
+            this.tabFuncionario.SelectedIndex = 0;
+            this.tabFuncionario.Size = new System.Drawing.Size(961, 482);
+            this.tabFuncionario.TabIndex = 57;
             // 
             // tabPage1
             // 
@@ -329,6 +329,7 @@ namespace SalesControl.br.com.project.view
             this.btnbuscar.TabIndex = 53;
             this.btnbuscar.Text = "Pesquisar";
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click_1);
             // 
             // cbuf
             // 
@@ -637,7 +638,7 @@ namespace SalesControl.br.com.project.view
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(953, 409);
+            this.tabPage2.Size = new System.Drawing.Size(953, 452);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -655,6 +656,7 @@ namespace SalesControl.br.com.project.view
             this.tabelaFuncionario.ReadOnly = true;
             this.tabelaFuncionario.Size = new System.Drawing.Size(936, 252);
             this.tabelaFuncionario.TabIndex = 49;
+            this.tabelaFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellClick);
             this.tabelaFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellContentClick);
             // 
             // btnpesquisar
@@ -662,20 +664,21 @@ namespace SalesControl.br.com.project.view
             this.btnpesquisar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnpesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnpesquisar.Location = new System.Drawing.Point(528, 58);
+            this.btnpesquisar.Location = new System.Drawing.Point(465, 58);
             this.btnpesquisar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnpesquisar.Name = "btnpesquisar";
             this.btnpesquisar.Size = new System.Drawing.Size(142, 30);
             this.btnpesquisar.TabIndex = 48;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
-            this.txtpesquisa.Location = new System.Drawing.Point(108, 59);
+            this.txtpesquisa.Location = new System.Drawing.Point(95, 59);
             this.txtpesquisa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpesquisa.Name = "txtpesquisa";
-            this.txtpesquisa.Size = new System.Drawing.Size(396, 23);
+            this.txtpesquisa.Size = new System.Drawing.Size(343, 23);
             this.txtpesquisa.TabIndex = 47;
             this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
@@ -694,8 +697,8 @@ namespace SalesControl.br.com.project.view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 668);
-            this.Controls.Add(this.tabClientes);
+            this.ClientSize = new System.Drawing.Size(965, 619);
+            this.Controls.Add(this.tabFuncionario);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnexcluir);
@@ -708,7 +711,7 @@ namespace SalesControl.br.com.project.view
             this.Load += new System.EventHandler(this.FrmFuncionarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabClientes.ResumeLayout(false);
+            this.tabFuncionario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -725,7 +728,7 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.TabControl tabClientes;
+        private System.Windows.Forms.TabControl tabFuncionario;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.ComboBox cbuf;

@@ -370,6 +370,7 @@ namespace SalesControl.br.com.project.view
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(139, 23);
             this.txtcodigo.TabIndex = 25;
+            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             // 
             // label13
             // 

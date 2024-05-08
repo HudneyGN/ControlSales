@@ -150,10 +150,9 @@ namespace SalesControl.br.com.project.view
         {
             // Botão pesquisar
             string nome = txtpesquisa.Text;
-
             ClienteDAO dao = new ClienteDAO();
 
-            tabelaCliente.DataSource = dao.listarClientePorNome(nome);
+            tabelaCliente.DataSource = dao.BuscarClientePorNome(nome);
 
             if(tabelaCliente.Rows.Count == 0)
             {
@@ -245,7 +244,7 @@ namespace SalesControl.br.com.project.view
             cbuf.Text = tabelaCliente.CurrentRow.Cells[13].Value.ToString();
 
             //Alterar para a guia Dados pessoais
-            tabClientes.SelectedTab = tabPage1;
+            tabClientes.SelectedTab = tabPage2;
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
@@ -268,7 +267,7 @@ namespace SalesControl.br.com.project.view
         {
             Cliente obj = new Cliente();
 
-            obj.codigo = Convert.ToInt32(txtcodigo.Text);
+            //obj.codigo = Convert.ToInt32(txtcodigo.Text);
             obj.nome = txtnome.Text;
             obj.rg = txtrg.Text;
             obj.cpf = txtcpf.Text;
@@ -297,7 +296,7 @@ namespace SalesControl.br.com.project.view
 
             ClienteDAO dao = new ClienteDAO();
 
-            tabelaCliente.DataSource = dao.listarClientePorNome(nome);
+            tabelaCliente.DataSource = dao.BuscarClientePorNome(nome);
 
             
         }
@@ -353,6 +352,11 @@ namespace SalesControl.br.com.project.view
         }
 
         private void txtpesquisa_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
         {
 
         }

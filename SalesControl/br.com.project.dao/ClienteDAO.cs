@@ -68,8 +68,8 @@ namespace SalesControl.br.com.project.dao
         {
             try
             {
-                // definir o cmd sql - insert into
-                string sql = @"update into tb_clientes set nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,
+                // definir o cmd sql - Update da tabela cliente
+                string sql = @"update tb_clientes set nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,
                                 celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
                                 cidade=@cidade,estado=@estado
                                     where id=@id";
@@ -142,7 +142,7 @@ namespace SalesControl.br.com.project.dao
         #endregion ExcluirCliente
 
 
-        #region BuscarCliente
+        #region ListarCliente
         public DataTable listarCliente()
         {
             try
@@ -174,8 +174,8 @@ namespace SalesControl.br.com.project.dao
         #endregion listarCliente
 
 
-        #region listarClientePorNome
-        public DataTable listarClientePorNome(string nome)
+        #region BuscarClientePorNome
+        public DataTable BuscarClientePorNome(string nome)
         {
             try
             {
