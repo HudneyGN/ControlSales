@@ -112,3 +112,5 @@ CREATE TABLE tb_itensvendas (
 
 
 select * from tb_clientes where nome like 'a%';
+
+select * from tb_funcionarios;
