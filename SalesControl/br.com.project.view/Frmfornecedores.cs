@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SalesControl.br.com.project.dao;
 using SalesControl.br.com.project.model;
 
 namespace SalesControl.br.com.project.view
@@ -40,6 +41,28 @@ namespace SalesControl.br.com.project.view
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
+            //Botão salvar
+
+            Fornecedor obj = new Fornecedor();
+            obj.nome = txtnome.Text;
+            obj.cnpj = txtcnpj.Text;
+            obj.email = txtemail.Text;
+            obj.telefone = txttelefone.Text;
+            obj.celular = txtcelular.Text;
+            obj.cep = txtcep.Text;
+            obj.endereco = txtendereco.Text;
+            obj.numero = Convert.ToInt32(txtnumero.Text);
+            obj.complemento = txtcomplemento.Text;
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.cbuf = cbuf.Text;
+
+            //criar o objobjeto da classe fornacedorDAO
+            FornecedorDAO dao = new FornecedorDAO();
+            dao.cadastrarFornecedor(obj);
+
+            //Carregar o datagriview de fornecedor
+
 
         }
 
@@ -78,6 +101,16 @@ namespace SalesControl.br.com.project.view
         }
 
         private void tabelaFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtrg_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
