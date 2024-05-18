@@ -154,6 +154,7 @@ namespace SalesControl.br.com.project.view
             this.btneditar.TabIndex = 62;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = false;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // tabPage2
             // 
@@ -180,8 +181,9 @@ namespace SalesControl.br.com.project.view
             this.tabelaFornecedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabelaFornecedores.Name = "tabelaFornecedores";
             this.tabelaFornecedores.ReadOnly = true;
-            this.tabelaFornecedores.Size = new System.Drawing.Size(936, 252);
+            this.tabelaFornecedores.Size = new System.Drawing.Size(936, 324);
             this.tabelaFornecedores.TabIndex = 49;
+            this.tabelaFornecedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedores_CellClick);
             this.tabelaFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellContentClick);
             // 
             // btnpesquisar
@@ -196,6 +198,7 @@ namespace SalesControl.br.com.project.view
             this.btnpesquisar.TabIndex = 48;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtpesquisa
             // 
@@ -204,6 +207,7 @@ namespace SalesControl.br.com.project.view
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(343, 23);
             this.txtpesquisa.TabIndex = 47;
+            this.txtpesquisa.TextChanged += new System.EventHandler(this.txtpesquisa_TextChanged);
             // 
             // label12
             // 

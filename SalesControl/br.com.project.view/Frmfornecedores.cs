@@ -21,6 +21,9 @@ namespace SalesControl.br.com.project.view
 
         private void Frmfornecedores_Load(object sender, EventArgs e)
         {
+            //listar fornecedores
+            FornecedorDAO dao = new FornecedorDAO();
+            tabelaFornecedores.DataSource = dao.listarFornecedores();
 
         }
 
@@ -36,7 +39,7 @@ namespace SalesControl.br.com.project.view
 
         private void btnnovo_Click(object sender, EventArgs e)
         {
-           new Helpers().Limpartela(this);
+            new Helpers().Limpartela(this);
         }
 
         private void btnsalvar_Click(object sender, EventArgs e)
@@ -62,13 +65,26 @@ namespace SalesControl.br.com.project.view
             dao.cadastrarFornecedor(obj);
 
             //Carregar o datagriview de fornecedor
+            tabelaFornecedores.DataSource = dao.listarFornecedores();
 
+            new Helpers().Limpartela(this);
 
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
         {
+            Fornecedor obj = new Fornecedor();
 
+            obj.codigo = Convert.ToInt32(txtcodigo.Text);
+
+            //criar o objobjeto da classe fornacedorDAO
+            FornecedorDAO dao = new FornecedorDAO();
+            dao.excluirFornecedor(obj);
+
+            //Carregar o datagriview de fornecedor
+            tabelaFornecedores.DataSource = dao.listarFornecedores();
+
+            new Helpers().Limpartela(this);
         }
 
         private void cbnivel_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,5 +130,75 @@ namespace SalesControl.br.com.project.view
         {
 
         }
-    }    
+
+        private void tabelaFornecedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtcodigo.Text = tabelaFornecedores.CurrentRow.Cells[0].Value.ToString();
+            txtnome.Text = tabelaFornecedores.CurrentRow.Cells[1].Value.ToString();
+            txtcnpj.Text = tabelaFornecedores.CurrentRow.Cells[2].Value.ToString();
+            txtemail.Text = tabelaFornecedores.CurrentRow.Cells[3].Value.ToString();
+            txttelefone.Text = tabelaFornecedores.CurrentRow.Cells[4].Value.ToString();
+            txtcelular.Text = tabelaFornecedores.CurrentRow.Cells[5].Value.ToString();
+            txtcep.Text = tabelaFornecedores.CurrentRow.Cells[6].Value.ToString();
+            txtendereco.Text = tabelaFornecedores.CurrentRow.Cells[7].Value.ToString();
+            txtnumero.Text = tabelaFornecedores.CurrentRow.Cells[8].Value.ToString();
+            txtcomplemento.Text = tabelaFornecedores.CurrentRow.Cells[9].Value.ToString();
+            txtbairro.Text = tabelaFornecedores.CurrentRow.Cells[10].Value.ToString();
+            txtcidade.Text = tabelaFornecedores.CurrentRow.Cells[11].Value.ToString();
+            cbuf.Text = tabelaFornecedores.CurrentRow.Cells[12].Value.ToString();
+
+            tabFornecedor.SelectedTab = tabPage1;
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            // Botão editar
+            Fornecedor obj = new Fornecedor();
+            obj.nome = txtnome.Text;
+            obj.cnpj = txtcnpj.Text;
+            obj.email = txtemail.Text;
+            obj.telefone = txttelefone.Text;
+            obj.celular = txtcelular.Text;
+            obj.cep = txtcep.Text;
+            obj.endereco = txtendereco.Text;
+            obj.numero = Convert.ToInt32(txtnumero.Text);
+            obj.complemento = txtcomplemento.Text;
+            obj.bairro = txtbairro.Text;
+            obj.cidade = txtcidade.Text;
+            obj.cbuf = cbuf.Text;
+
+            obj.codigo = Convert.ToInt32(txtcodigo.Text);
+
+            //criar o objobjeto da classe fornacedorDAO
+            FornecedorDAO dao = new FornecedorDAO();
+            dao.alterarFornecedor(obj);
+
+            //Carregar o datagriview de fornecedor
+            tabelaFornecedores.DataSource = dao.listarFornecedores();
+
+            new Helpers().Limpartela(this);
+        }
+
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+            // Botão pesquisar
+            string nome = txtpesquisa.Text;
+            FornecedorDAO dao = new FornecedorDAO();
+
+            tabelaFornecedores.DataSource = dao.buscarFornecedorPorNome(nome);
+
+            if (tabelaFornecedores.Rows.Count == 0)
+            {
+                MessageBox.Show("Nenhum fornecedor encontrado");
+                tabelaFornecedores.DataSource = dao.listarFornecedores();
+            }
+        }
+
+        private void txtpesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+            FornecedorDAO dao = new FornecedorDAO();
+            tabelaFornecedores.DataSource = dao.listarFornecedorPorNome(nome);
+        }
+    }
 }

@@ -19,7 +19,8 @@ namespace SalesControl
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmClientes());
             //Application.Run(new FrmFuncionarios());
-            Application.Run(new Frmfornecedores());
+            //Application.Run(new Frmfornecedores());
+            Application.Run(new FrmProdutos());
         }
     }
 }

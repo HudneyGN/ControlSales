@@ -17,7 +17,6 @@ namespace SalesControl.br.com.project.dao
     {
         private MySqlConnection conexao;
 
-
         public ClienteDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();

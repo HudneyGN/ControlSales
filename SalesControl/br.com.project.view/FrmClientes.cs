@@ -121,6 +121,8 @@ namespace SalesControl.br.com.project.view
 
             //recarregar o datagridview
             tabelaCliente.DataSource = dao.listarCliente();
+
+            new Helpers().Limpartela(this);
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)
@@ -244,7 +246,7 @@ namespace SalesControl.br.com.project.view
             cbuf.Text = tabelaCliente.CurrentRow.Cells[13].Value.ToString();
 
             //Alterar para a guia Dados pessoais
-            tabClientes.SelectedTab = tabPage2;
+            tabClientes.SelectedTab = tabPage1;
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
@@ -261,6 +263,8 @@ namespace SalesControl.br.com.project.view
 
             //Recarregar o datagridview
             tabelaCliente.DataSource = dao.listarCliente();
+
+            new Helpers().Limpartela(this);
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -288,6 +292,8 @@ namespace SalesControl.br.com.project.view
 
             //Recarregar o datagridview
             tabelaCliente.DataSource = dao.listarCliente();
+
+            new Helpers().Limpartela(this);
         }
 
         private void txtpesquisa_KeyPress(object sender, KeyPressEventArgs e)

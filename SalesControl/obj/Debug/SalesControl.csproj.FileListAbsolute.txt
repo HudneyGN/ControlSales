@@ -43,3 +43,4 @@ F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.Form1.re
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.csproj.CopyComplete
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmFuncionarios.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmfornecedores.resources
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmProdutos.resources

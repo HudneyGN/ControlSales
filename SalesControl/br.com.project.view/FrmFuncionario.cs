@@ -197,6 +197,8 @@ namespace SalesControl.br.com.project.view
 
             tabelaFuncionario.DataSource = dao.listarFuncionarios();
 
+            new Helpers().Limpartela(this);
+
         }
 
         private void btnexcluir_Click(object sender, EventArgs e)
@@ -210,6 +212,8 @@ namespace SalesControl.br.com.project.view
 
             // atualizar a tabela 
             tabelaFuncionario.DataSource = dao.listarFuncionarios();
+
+            new Helpers().Limpartela(this);
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -242,6 +246,8 @@ namespace SalesControl.br.com.project.view
             dao.alterarFuncionario(obj);
 
             tabelaFuncionario.DataSource = dao.listarFuncionarios();
+
+            new Helpers().Limpartela(this);
 
         }
 
