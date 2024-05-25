@@ -48,7 +48,7 @@ namespace SalesControl.br.com.project.dao
                 // Abrir conexao e executar o comando sql
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
-               
+
                 MessageBox.Show("Cliente cadastrado com sucesso! ");
                 conexao.Close();
             }
@@ -57,11 +57,11 @@ namespace SalesControl.br.com.project.dao
 
                 MessageBox.Show("Erro ao cadastrar cliente: " + erro);
             }
-            
+
         }
         #endregion
 
-        
+
         #region AlterarCliente
         public void alterarCliente(Cliente obj)
         {
@@ -119,7 +119,7 @@ namespace SalesControl.br.com.project.dao
                 string sql = @"delete from tb_clientes where id = @id";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                
+
 
                 executacmd.Parameters.AddWithValue(@"id", obj.codigo);
 
@@ -160,7 +160,7 @@ namespace SalesControl.br.com.project.dao
                 da.Fill(tabelacliente);
                 conexao.Close();
                 return tabelacliente;
-              
+
             }
             catch (Exception erro)
             {
@@ -206,5 +206,50 @@ namespace SalesControl.br.com.project.dao
 
         #endregion
 
+        #region método que retorna um cliente por cpf
+
+        public Cliente retornaClienteporCpf(string cpf)
+        {
+
+            try
+            {
+                //Criar o Comando sql retornanso um cliente
+                Cliente obj = new Cliente();
+
+                string sql = @"select * from tb_clientes
+                               where cpf=@cpf";
+
+                // organizar o comando sql e executar 
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                conexao.Close();
+
+                if (rs.Read())
+                {
+                    obj.codigo = rs.GetInt32("id");
+                    obj.nome = rs.GetString("nome");
+                    return obj;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrado! ");
+                    return null;
+                }
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Cliente não cadastrado no sistema! " + erro);
+                return null;
+            }
+        }
+        #endregion
+
     }
+
 }
+    

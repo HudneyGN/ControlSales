@@ -162,6 +162,7 @@
     <Compile Include="br.com.project.model\Fornecedor.cs" />
     <Compile Include="br.com.project.model\Funcionario.cs" />
     <Compile Include="br.com.project.model\Helpers.cs" />
+    <Compile Include="br.com.project.model\ItemVenda.cs" />
     <Compile Include="br.com.project.model\Produto.cs" />
     <Compile Include="br.com.project.model\Venda.cs" />
     <Compile Include="br.com.project.view\FrmClientes.cs">
