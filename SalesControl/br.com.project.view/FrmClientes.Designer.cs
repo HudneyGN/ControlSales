@@ -336,6 +336,7 @@ namespace SalesControl.br.com.project.view
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(387, 23);
             this.txtnome.TabIndex = 36;
+            this.txtnome.TextChanged += new System.EventHandler(this.txtnome_TextChanged);
             // 
             // txtemail
             // 
