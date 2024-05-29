@@ -226,7 +226,7 @@ namespace SalesControl.br.com.project.dao
                 conexao.Open();
                 MySqlDataReader rs = executacmd.ExecuteReader();
 
-                conexao.Close();
+                //conexao.Close();
 
                 if (rs.Read())
                 {

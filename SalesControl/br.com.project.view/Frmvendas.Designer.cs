@@ -33,6 +33,8 @@ namespace SalesControl.br.com.project.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.grupoBox1 = new System.Windows.Forms.GroupBox();
+            this.txtdata = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.MaskedTextBox();
@@ -54,8 +56,6 @@ namespace SalesControl.br.com.project.view
             this.label4 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnpagamento = new System.Windows.Forms.Button();
-            this.txtdata = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grupoBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,6 +114,26 @@ namespace SalesControl.br.com.project.view
             this.grupoBox1.TabStop = false;
             this.grupoBox1.Enter += new System.EventHandler(this.grupoBox1_Enter);
             // 
+            // txtdata
+            // 
+            this.txtdata.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdata.Location = new System.Drawing.Point(76, 20);
+            this.txtdata.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtdata.Name = "txtdata";
+            this.txtdata.Size = new System.Drawing.Size(116, 23);
+            this.txtdata.TabIndex = 45;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label5.Location = new System.Drawing.Point(9, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 17);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Data:";
+            // 
             // txtnome
             // 
             this.txtnome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +165,7 @@ namespace SalesControl.br.com.project.view
             this.txtcpf.Size = new System.Drawing.Size(116, 23);
             this.txtcpf.TabIndex = 41;
             this.txtcpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtcpf_MaskInputRejected);
+            this.txtcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcpf_KeyPress);
             // 
             // label17
             // 
@@ -346,26 +367,6 @@ namespace SalesControl.br.com.project.view
             this.btnpagamento.Text = "Pagamento";
             this.btnpagamento.UseVisualStyleBackColor = false;
             this.btnpagamento.Click += new System.EventHandler(this.btnpagamento_Click);
-            // 
-            // txtdata
-            // 
-            this.txtdata.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdata.Location = new System.Drawing.Point(76, 20);
-            this.txtdata.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtdata.Name = "txtdata";
-            this.txtdata.Size = new System.Drawing.Size(116, 23);
-            this.txtdata.TabIndex = 45;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(9, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 17);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Data:";
             // 
             // Frmvendas
             // 

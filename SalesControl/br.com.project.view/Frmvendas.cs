@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SalesControl.br.com.project.dao;
+using SalesControl.br.com.project.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace SalesControl.br.com.project.view
 {
     public partial class Frmvendas : Form
     {
+        Cliente cliente = new Cliente();
+        ClienteDAO cdao = new ClienteDAO();
+
         public Frmvendas()
         {
             InitializeComponent();
@@ -65,6 +70,16 @@ namespace SalesControl.br.com.project.view
         private void btnpagamento_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtcpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                cliente = cdao.retornaClienteporCpf(txtcpf.Text);
+
+                txtnome.Text = cliente.nome;
+            }
         }
     }
 }
