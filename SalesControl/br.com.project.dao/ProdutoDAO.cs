@@ -224,5 +224,50 @@ namespace SalesControl.br.com.project.dao
 
         }
         #endregion
+
+        #region Método que retorna produto por código
+
+        public Produto retornaProdutoPorodigo(int id)
+        {
+            try
+            {
+                // criar o comado sql
+
+                string sql = @"select * from tb_produtos 
+                                where id = @id";
+
+                // organizar o comando sql 
+                MySqlCommand executecmd = new MySqlCommand(sql, conexao);
+                executecmd.Parameters.AddWithValue("@id", id);
+
+                conexao.Open();
+
+                // criar MysqldaraReader 
+                MySqlDataReader rs = executecmd.ExecuteReader();
+                if (rs.Read())
+                {
+                    Produto p = new Produto();
+                    p.codigo = rs.GetInt32("id");
+                    p.descricao = rs.GetString("descricao");
+                    p.preco = rs.GetDecimal("preco");
+
+                    return p;
+                }
+                else
+                {
+                    MessageBox.Show("Nenhm oroduto encontrado com esse cóigo");
+                    return null;
+                }
+
+                conexao.Close();
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Ocorreu um erro! " + erro);
+                return null;
+            }
+        }
+        #endregion
     }
 }

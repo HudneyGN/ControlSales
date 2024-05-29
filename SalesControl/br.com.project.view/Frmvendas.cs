@@ -14,8 +14,15 @@ namespace SalesControl.br.com.project.view
 {
     public partial class Frmvendas : Form
     {
+        // instanciando objeto de Cliente
         Cliente cliente = new Cliente();
         ClienteDAO cdao = new ClienteDAO();
+
+        // instanciando objeto de Produto
+        Produto p = new Produto();
+        ProdutoDAO pdao = new ProdutoDAO();
+
+
 
         public Frmvendas()
         {
@@ -79,6 +86,17 @@ namespace SalesControl.br.com.project.view
                 cliente = cdao.retornaClienteporCpf(txtcpf.Text);
 
                 txtnome.Text = cliente.nome;
+            }
+        }
+
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                p = pdao.retornaProdutoPorodigo(Convert.ToInt32(txtcodigo.Text));
+
+                txtdescricao.Text = p.descricao;
+                txtpreco.Text = p.preco.ToString();
             }
         }
     }

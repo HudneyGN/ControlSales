@@ -257,6 +257,7 @@ namespace SalesControl.br.com.project.view
             this.txtcodigo.Size = new System.Drawing.Size(139, 20);
             this.txtcodigo.TabIndex = 52;
             this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
+            this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
             // label13
             // 
