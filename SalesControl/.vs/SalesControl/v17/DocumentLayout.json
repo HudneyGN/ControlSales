@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.connection\\connectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.connection\\connectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "App.config",
               "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -47,18 +47,20 @@
               "RelativeToolTip": "br.com.project.connection\\ConnectionFactory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T18:47:34.539Z"
+              "WhenOpened": "2024-05-19T18:47:34.539Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FrmClientes.cs [Design]",
               "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmClientes.cs",
               "RelativeDocumentMoniker": "br.com.project.view\\FrmClientes.cs",
               "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmClientes.cs [Design]",
               "RelativeToolTip": "br.com.project.view\\FrmClientes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T23:03:14.515Z"
+              "WhenOpened": "2024-04-23T23:03:14.515Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

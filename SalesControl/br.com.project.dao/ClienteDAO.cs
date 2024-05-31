@@ -232,11 +232,13 @@ namespace SalesControl.br.com.project.dao
                 {
                     obj.codigo = rs.GetInt32("id");
                     obj.nome = rs.GetString("nome");
+                    conexao.Close();
                     return obj;
                 }
                 else
                 {
                     MessageBox.Show("Cliente não encontrado! ");
+                    conexao.Close();
                     return null;
                 }
 
@@ -244,6 +246,7 @@ namespace SalesControl.br.com.project.dao
             catch (Exception erro)
             {
                 MessageBox.Show("Cliente não cadastrado no sistema! " + erro);
+                conexao.Close();
                 return null;
             }
         }

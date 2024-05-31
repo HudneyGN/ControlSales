@@ -50,16 +50,16 @@ namespace SalesControl.br.com.project.view
             this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.tabelaproduros = new System.Windows.Forms.DataGridView();
+            this.tabelaprodutos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txttotal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnpagamento = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grupoBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaproduros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaprodutos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -209,6 +209,7 @@ namespace SalesControl.br.com.project.view
             this.btnremover.TabIndex = 60;
             this.btnremover.Text = "Remover Item ";
             this.btnremover.UseVisualStyleBackColor = false;
+            this.btnremover.Click += new System.EventHandler(this.btnremover_Click);
             // 
             // btnadd
             // 
@@ -222,6 +223,7 @@ namespace SalesControl.br.com.project.view
             this.btnadd.TabIndex = 59;
             this.btnadd.Text = "Adicionar Item ";
             this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // txtpreco
             // 
@@ -303,18 +305,21 @@ namespace SalesControl.br.com.project.view
             this.label23.TabIndex = 51;
             this.label23.Text = "Código:";
             // 
-            // tabelaproduros
+            // tabelaprodutos
             // 
-            this.tabelaproduros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaproduros.Location = new System.Drawing.Point(497, 125);
-            this.tabelaproduros.Name = "tabelaproduros";
-            this.tabelaproduros.Size = new System.Drawing.Size(449, 386);
-            this.tabelaproduros.TabIndex = 5;
-            this.tabelaproduros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.tabelaprodutos.AllowUserToAddRows = false;
+            this.tabelaprodutos.AllowUserToDeleteRows = false;
+            this.tabelaprodutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaprodutos.Location = new System.Drawing.Point(496, 125);
+            this.tabelaprodutos.Name = "tabelaprodutos";
+            this.tabelaprodutos.ReadOnly = true;
+            this.tabelaprodutos.Size = new System.Drawing.Size(449, 386);
+            this.tabelaprodutos.TabIndex = 5;
+            this.tabelaprodutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txttotal);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(497, 517);
             this.groupBox1.Name = "groupBox1";
@@ -322,14 +327,14 @@ namespace SalesControl.br.com.project.view
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
+            // txttotal
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(72, 20);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 23);
-            this.textBox1.TabIndex = 43;
+            this.txttotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotal.Location = new System.Drawing.Point(72, 20);
+            this.txttotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(303, 23);
+            this.txttotal.TabIndex = 43;
             // 
             // label4
             // 
@@ -377,7 +382,7 @@ namespace SalesControl.br.com.project.view
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnpagamento);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tabelaproduros);
+            this.Controls.Add(this.tabelaprodutos);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grupoBox1);
             this.Controls.Add(this.panel1);
@@ -390,7 +395,7 @@ namespace SalesControl.br.com.project.view
             this.grupoBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaproduros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaprodutos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -418,9 +423,9 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnremover;
-        private System.Windows.Forms.DataGridView tabelaproduros;
+        private System.Windows.Forms.DataGridView tabelaprodutos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnpagamento;

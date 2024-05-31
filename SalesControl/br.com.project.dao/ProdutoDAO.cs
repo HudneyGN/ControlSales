@@ -251,20 +251,23 @@ namespace SalesControl.br.com.project.dao
                     p.descricao = rs.GetString("descricao");
                     p.preco = rs.GetDecimal("preco");
 
+                    conexao.Close();
                     return p;
                 }
                 else
                 {
                     MessageBox.Show("Nenhm oroduto encontrado com esse cóigo");
+                    conexao.Close();
                     return null;
                 }
 
-                conexao.Close();
+                
             }
             catch (Exception erro)
             {
 
                 MessageBox.Show("Ocorreu um erro! " + erro);
+                conexao.Close();
                 return null;
             }
         }

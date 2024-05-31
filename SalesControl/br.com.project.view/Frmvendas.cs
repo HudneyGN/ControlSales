@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SalesControl.br.com.project.view
 {
@@ -22,11 +23,27 @@ namespace SalesControl.br.com.project.view
         Produto p = new Produto();
         ProdutoDAO pdao = new ProdutoDAO();
 
+        //declaração de variáveis
+        int qtd;
+        decimal preco, subtotal, total;
+
+        //carrinho
+        DataTable carrinho = new DataTable(); // objeto da classe DataTable 
+
 
 
         public Frmvendas()
         {
             InitializeComponent();
+
+            carrinho.Columns.Add("Código", typeof(int));
+            carrinho.Columns.Add("Produto", typeof(string));
+            carrinho.Columns.Add("Qtd", typeof(int));
+            carrinho.Columns.Add("Preço", typeof(decimal));
+            carrinho.Columns.Add("Subtotal", typeof(decimal));
+
+            tabelaprodutos.DataSource = carrinho;
+
         }
 
         private void Frmvendas_Load(object sender, EventArgs e)
@@ -77,6 +94,46 @@ namespace SalesControl.br.com.project.view
         private void btnpagamento_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            //Botão adicionar item
+            qtd = Convert.ToInt32(txtqtd.Text);
+            preco = Convert.ToDecimal(txtpreco.Text);
+
+            subtotal = qtd * preco;
+
+            total = total + subtotal;
+
+            //adicionar item no carrinho
+            carrinho.Rows.Add(Convert.ToInt32(txtcodigo.Tag), txtdescricao.Text, qtd, preco, subtotal);
+
+            txttotal.Text = total.ToString();
+
+            //limpar campos 
+            txtcodigo.Clear();
+            txtdescricao.Clear();
+            txtqtd.Clear();
+            txtpreco.Clear();
+        }
+
+        private void btnremover_Click(object sender, EventArgs e)
+        {
+            //Botão remover item 
+            decimal subproduto = Convert.ToDecimal(tabelaprodutos.CurrentRow.Cells[4].Value.ToString());
+
+            int indice = tabelaprodutos.CurrentRow.Index;
+            DataRow linha = carrinho.Rows[indice];
+
+            carrinho.Rows.Remove(linha);
+            carrinho.AcceptChanges();
+
+            total -= subproduto;
+
+            txttotal.Text = total.ToString();
+
+            MessageBox.Show("Item removido com sucesso!");
         }
 
         private void txtcpf_KeyPress(object sender, KeyPressEventArgs e)
