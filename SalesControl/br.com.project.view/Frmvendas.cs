@@ -48,7 +48,8 @@ namespace SalesControl.br.com.project.view
 
         private void Frmvendas_Load(object sender, EventArgs e)
         {
-
+            // pegar a data atual 
+            txtdata.Text = DateTime.Now.ToShortDateString();
         }
 
         private void grupoBox1_Enter(object sender, EventArgs e)
@@ -93,29 +94,45 @@ namespace SalesControl.br.com.project.view
 
         private void btnpagamento_Click(object sender, EventArgs e)
         {
+            //Botão pagamento
+            DateTime dataAtual = Convert.ToDateTime(txtdata.Text);
+            Frmpagamentos tela = new Frmpagamentos(cliente, carrinho, dataAtual);
 
+            //Passando total para tela de pagamentos
+            tela.txttotal.Text = total.ToString();
+
+            tela.ShowDialog();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            //Botão adicionar item
-            qtd = Convert.ToInt32(txtqtd.Text);
-            preco = Convert.ToDecimal(txtpreco.Text);
+            try
+            {
+                //Botão adicionar item
+                qtd = Convert.ToInt32(txtqtd.Text);
+                preco = Convert.ToDecimal(txtpreco.Text);
 
-            subtotal = qtd * preco;
+                subtotal = qtd * preco;
 
-            total = total + subtotal;
+                total = total + subtotal;
 
-            //adicionar item no carrinho
-            carrinho.Rows.Add(Convert.ToInt32(txtcodigo.Tag), txtdescricao.Text, qtd, preco, subtotal);
+                //adicionar item no carrinho
+                carrinho.Rows.Add(Convert.ToInt32(txtcodigo.Tag), txtdescricao.Text, qtd, preco, subtotal);
 
-            txttotal.Text = total.ToString();
+                txttotal.Text = total.ToString();
 
-            //limpar campos 
-            txtcodigo.Clear();
-            txtdescricao.Clear();
-            txtqtd.Clear();
-            txtpreco.Clear();
+                //limpar campos 
+                txtcodigo.Clear();
+                txtdescricao.Clear();
+                txtqtd.Clear();
+                txtpreco.Clear();
+
+                txtcodigo.Focus();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Digite o código do produto! " + erro);
+            }
         }
 
         private void btnremover_Click(object sender, EventArgs e)

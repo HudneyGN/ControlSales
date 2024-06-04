@@ -80,3 +80,4 @@ F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\Microsoft.Extensions.
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\MySqlConnector.xml
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\System.Collections.Immutable.xml
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmvendas.resources
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmpagamentos.resources
