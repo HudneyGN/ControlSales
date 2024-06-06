@@ -157,6 +157,8 @@
     <Compile Include="br.com.project.dao\ClienteDAO.cs" />
     <Compile Include="br.com.project.dao\FornecedorDAO.cs" />
     <Compile Include="br.com.project.dao\FuncionarioDAO.cs" />
+    <Compile Include="br.com.project.dao\ItemVendaDAO.cs" />
+    <Compile Include="br.com.project.dao\MySqlDataDataReader.cs" />
     <Compile Include="br.com.project.dao\ProdutoDAO.cs" />
     <Compile Include="br.com.project.dao\VendaDAO.cs" />
     <Compile Include="br.com.project.model\Cliente.cs" />

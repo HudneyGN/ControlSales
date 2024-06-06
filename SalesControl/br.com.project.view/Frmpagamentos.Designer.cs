@@ -41,6 +41,8 @@ namespace SalesControl.br.com.project.view
             this.txttotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnfinalizar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtobs = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@ namespace SalesControl.br.com.project.view
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(73, 23);
+            this.label2.Location = new System.Drawing.Point(187, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(280, 55);
             this.label2.TabIndex = 1;
@@ -65,7 +67,7 @@ namespace SalesControl.br.com.project.view
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 108);
+            this.panel1.Size = new System.Drawing.Size(720, 108);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -178,11 +180,34 @@ namespace SalesControl.br.com.project.view
             this.btnfinalizar.UseVisualStyleBackColor = false;
             this.btnfinalizar.Click += new System.EventHandler(this.btnfinalizar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(395, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 39);
+            this.label6.TabIndex = 68;
+            this.label6.Text = "OBS:";
+            // 
+            // txtobs
+            // 
+            this.txtobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtobs.Location = new System.Drawing.Point(489, 124);
+            this.txtobs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtobs.Multiline = true;
+            this.txtobs.Name = "txtobs";
+            this.txtobs.Size = new System.Drawing.Size(207, 290);
+            this.txtobs.TabIndex = 69;
+            // 
             // Frmpagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 450);
+            this.ClientSize = new System.Drawing.Size(720, 450);
+            this.Controls.Add(this.txtobs);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnfinalizar);
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.label5);
@@ -217,5 +242,7 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnfinalizar;
         public System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtobs;
     }
 }

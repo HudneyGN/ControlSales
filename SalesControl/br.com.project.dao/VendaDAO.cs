@@ -41,7 +41,7 @@ namespace SalesControl.br.com.project.dao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Venda cadastrado com sucesso!");
+                MessageBox.Show("Venda efetuada com sucesso!");
                 conexao.Close(); //Fechar conexão
 
 
@@ -50,6 +50,45 @@ namespace SalesControl.br.com.project.dao
             {
 
                 MessageBox.Show("Aconteceu um erro " + erro);
+            }
+        }
+
+        #endregion
+
+        #region Método que retorna o id da ultima venda 
+
+        public int retornaIdUltimaVenda(int id)
+        {
+            try
+            {
+                int idVenda = 0;
+
+                // Criar o comando sql
+                string sql = @"select max(id) if from tb_vendas";
+
+                MySqlCommand executacmdsql = new MySqlCommand(sql, conexao); // testar com executacmd
+
+                //Abrir conexão
+                conexao.Open();
+
+                MySqlDataReader rs = executacmdsql.ExecuteReader(); // testar com executacmd
+
+                MessageBox.Show("Venda cadastrado com sucesso!");
+                conexao.Close(); //Fechar conexão
+
+                if (rs.Read())
+                {
+                    idVenda = rs.GetInt32("id");
+                    
+                }
+                conexao.Close();
+                return idVenda;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu um erro! " + erro);
+                conexao.Close();
+                return 0;
             }
         }
 
