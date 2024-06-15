@@ -1,4 +1,5 @@
-﻿using Mysqlx;
+﻿using MySql.Data.MySqlClient;
+using Mysqlx;
 using SalesControl.br.com.project.dao;
 using SalesControl.br.com.project.model;
 using System;
@@ -50,8 +51,8 @@ namespace SalesControl.br.com.project.view
         {
             // Botão finalizar venda
             try
-{
-                decimal v_dinheiro, v_cartao, troco, totalPago, total, faltaPagar;
+            {
+                decimal v_dinheiro, v_cartao, troco, totalPago, total;
                 v_dinheiro = Convert.ToDecimal(txtdinheiro.Text);
                 v_cartao = Convert.ToDecimal(txtcartao.Text);
                 total = Convert.ToDecimal(txttotal.Text);
@@ -59,10 +60,10 @@ namespace SalesControl.br.com.project.view
                 //Calcular o total pago
                 totalPago = v_dinheiro + v_cartao;
 
-                if(totalPago < total)
+                if (totalPago < total)
                 {
-                    faltaPagar = total - totalPago;
-                    MessageBox.Show("Restante a pagar: " + faltaPagar);
+
+                    MessageBox.Show("Total pago menor que o valor da venda!: ");
                 }
                 else
                 {
@@ -71,18 +72,36 @@ namespace SalesControl.br.com.project.view
 
                     Venda vendas = new Venda();
 
-                    vendas.cliente_id = cliente.codigo; //pegando o id do cliente
+                    //pegando o id do cliente
+                    vendas.cliente_id = cliente.codigo;
                     vendas.data_venda = dataAtual;
                     vendas.total_venda = total;
                     vendas.obs = txtobs.Text;
 
                     VendaDAO vdao = new VendaDAO();
-
                     txttroco.Text = troco.ToString();
 
-                    vdao.cadastrarVenda(vendas);                  
-                }
+                    vdao.cadastrarVenda(vendas);
+
+                    //Cadastrar os itens da venda
+                    // Código que utiliza o método retornarIdUltimaVenda
+
+                    foreach (DataRow linha in carrinho.Rows)
+                    {
+                        ItemVenda item = new ItemVenda();
+                        item.venda_id = vdao.retornaIdUltimaVenda();
+                        item.produto_id = Convert.ToInt32(linha["Código"].ToString());
+                        item.qtd = Convert.ToInt32(linha["Qtd"].ToString());
+                        item.subtotal = Convert.ToDecimal(linha["Subtotal"].ToString());
+
+                        ItemVendaDAO itemdao = new ItemVendaDAO();
+                        itemdao.cadastrarItem(item);                      
+                    }
                 
+                    MessageBox.Show("Venda Finalizada com Sucesso! ");
+                    this.Close();
+                }
+
             }
             catch (Exception erro)
             {

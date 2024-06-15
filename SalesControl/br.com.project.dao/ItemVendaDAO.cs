@@ -25,7 +25,7 @@ namespace SalesControl.br.com.project.dao
             {
                 // Criar o sql 
                 string sql = @"insert into tb_itensvendas (venda_id, produto_id, qtd, subtotal)
-                                values(@venda_id, @produto_id, @qtd, @subtotal)";
+                                values (@venda_id, @produto_id, @qtd, @subtotal)";
 
                 // Organizar e executar o comando sql 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
@@ -38,7 +38,7 @@ namespace SalesControl.br.com.project.dao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Item cadastrado com sucesso!");
+                //MessageBox.Show("Item cadastrado com sucesso!");
                 conexao.Close(); //Fechar conexão
 
             }

@@ -31,7 +31,7 @@ namespace SalesControl.br.com.project.dao
                 string sql = @"insert into tb_produtos (descricao,preco,qtd_estoque,for_id)
                                 values (@descricao,@preco,@qtd_estoque,@for_id)";
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                //executacmd.Parameters.AddWithValue(@"id", obj.codigo);
+                executacmd.Parameters.AddWithValue(@"id", obj.codigo);
                 executacmd.Parameters.AddWithValue(@"descricao", obj.descricao);
                 executacmd.Parameters.AddWithValue(@"preco", obj.preco);
                 executacmd.Parameters.AddWithValue(@"qtd_estoque", obj.qtdestoque);

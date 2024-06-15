@@ -25,12 +25,11 @@ namespace SalesControl.br.com.project.view
 
         //declaração de variáveis
         int qtd;
-        decimal preco, subtotal, total;
+        decimal preco;
+        decimal subtotal, total;
 
         //carrinho
         DataTable carrinho = new DataTable(); // objeto da classe DataTable 
-
-
 
         public Frmvendas()
         {
