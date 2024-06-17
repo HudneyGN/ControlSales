@@ -19,7 +19,7 @@ namespace SalesControl.br.com.project.view
         Cliente cliente = new Cliente();
         ClienteDAO cdao = new ClienteDAO();
 
-        // instanciando objeto de Produto
+        // instanciando objeto de Produto / objetos de produtos
         Produto p = new Produto();
         ProdutoDAO pdao = new ProdutoDAO();
 
@@ -47,16 +47,12 @@ namespace SalesControl.br.com.project.view
 
         private void Frmvendas_Load(object sender, EventArgs e)
         {
+
             // pegar a data atual 
             txtdata.Text = DateTime.Now.ToShortDateString();
         }
 
         private void grupoBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcodigo_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -99,8 +95,8 @@ namespace SalesControl.br.com.project.view
 
             //Passando total para tela de pagamentos
             tela.txttotal.Text = total.ToString();
-
-            tela.ShowDialog();
+            //tela.ShowDialog();
+            tela.Show();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -113,10 +109,10 @@ namespace SalesControl.br.com.project.view
 
                 subtotal = qtd * preco;
 
-                total = total + subtotal;
+                total += subtotal;
 
                 //adicionar item no carrinho
-                carrinho.Rows.Add(Convert.ToInt32(txtcodigo.Tag), txtdescricao.Text, qtd, preco, subtotal);
+                carrinho.Rows.Add(Convert.ToInt32(txtcodigo.Text), txtdescricao.Text, qtd, preco, subtotal);
 
                 txttotal.Text = total.ToString();
 
@@ -157,20 +153,45 @@ namespace SalesControl.br.com.project.view
             if (e.KeyChar == 13)
             {
                 cliente = cdao.retornaClienteporCpf(txtcpf.Text);
-
-                txtnome.Text = cliente.nome;
+                // adicionado if dentro de outro para não quebrar a execução por erro 
+                if (cliente != null)
+                {
+                    txtnome.Text = cliente.nome;
+                }
+                else
+                {
+                    txtcpf.Clear();
+                    txtcpf.Focus();
+                }
+                
             }
+        }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == 13)
             {
-                p = pdao.retornaProdutoPorodigo(Convert.ToInt32(txtcodigo.Text));
-
-                txtdescricao.Text = p.descricao;
-                txtpreco.Text = p.preco.ToString();
+                p = pdao.retornaProdutoPorCodigo(Convert.ToInt32(txtcodigo.Text));      
+                
+                // adicionado if dentro de outro para não quebrar a execução por erro 
+                if (p != null) { 
+                    txtdescricao.Text = p.descricao;
+                    txtpreco.Text = p.preco.ToString();
+                }
+                else
+                {
+                    txtcodigo.Clear();
+                    txtpreco.Clear();
+                    txtdescricao.Clear();
+                    txtcodigo.Focus();
+                }
             }
+            
         }
     }
 }

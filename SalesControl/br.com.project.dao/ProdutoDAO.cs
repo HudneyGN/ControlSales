@@ -186,7 +186,7 @@ namespace SalesControl.br.com.project.dao
         }
         #endregion
 
-        #region Método buscar ptodutos por nome
+        #region Método buscar produtos por nome
 
         public DataTable buscarProdutoPorNome(string nome)
         {
@@ -227,7 +227,7 @@ namespace SalesControl.br.com.project.dao
 
         #region Método que retorna produto por código
 
-        public Produto retornaProdutoPorodigo(int id)
+        public Produto retornaProdutoPorCodigo(int id)
         {
             try
             {
@@ -256,7 +256,7 @@ namespace SalesControl.br.com.project.dao
                 }
                 else
                 {
-                    MessageBox.Show("Nenhm oroduto encontrado com esse cóigo");
+                    MessageBox.Show("Nenhum Produto encontrado com esse código");
                     conexao.Close();
                     return null;
                 }

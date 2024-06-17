@@ -41,7 +41,7 @@ namespace SalesControl.br.com.project.view
 
         private void Frmpagamentos_Load(object sender, EventArgs e)
         {
-            //Carregar valores para tela 
+            ////Carregar valores para tela 
             txttroco.Text = "0,00";
             txtdinheiro.Text = "0,00";
             txtcartao.Text = "0,00";
@@ -99,7 +99,10 @@ namespace SalesControl.br.com.project.view
                     }
                 
                     MessageBox.Show("Venda Finalizada com Sucesso! ");
-                    this.Close();
+                    //this.Close();
+                    this.Dispose();
+
+                    new Frmvendas().ShowDialog();  //voltando para a tela venda ao finalizar uma venda na tela de pagamentos.
                 }
 
             }

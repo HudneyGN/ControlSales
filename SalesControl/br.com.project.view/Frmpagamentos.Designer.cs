@@ -128,6 +128,7 @@ namespace SalesControl.br.com.project.view
             this.txttroco.Location = new System.Drawing.Point(211, 226);
             this.txttroco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txttroco.Name = "txttroco";
+            this.txttroco.ReadOnly = true;
             this.txttroco.Size = new System.Drawing.Size(178, 47);
             this.txttroco.TabIndex = 64;
             this.txttroco.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
