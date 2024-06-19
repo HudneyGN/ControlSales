@@ -53,6 +53,11 @@ namespace SalesControl.br.com.project.view
             try
             {
                 decimal v_dinheiro, v_cartao, troco, totalPago, total;
+
+                ProdutoDAO dao_produto = new ProdutoDAO();
+
+                int qtd_estoque, qtd_comprada, estoque_atualizado;
+
                 v_dinheiro = Convert.ToDecimal(txtdinheiro.Text);
                 v_cartao = Convert.ToDecimal(txtcartao.Text);
                 total = Convert.ToDecimal(txttotal.Text);
@@ -94,6 +99,13 @@ namespace SalesControl.br.com.project.view
                         item.qtd = Convert.ToInt32(linha["Qtd"].ToString());
                         item.subtotal = Convert.ToDecimal(linha["Subtotal"].ToString());
 
+                        //Baixa no estoque
+                        qtd_estoque = dao_produto.retornaEstoqueAtual(item.produto_id);
+                        qtd_comprada = item.qtd;
+                        estoque_atualizado = qtd_estoque - qtd_comprada;
+
+                        dao_produto.baixaEstoque(item.produto_id, estoque_atualizado);
+
                         ItemVendaDAO itemdao = new ItemVendaDAO();
                         itemdao.cadastrarItem(item);                      
                     }
@@ -102,7 +114,7 @@ namespace SalesControl.br.com.project.view
                     //this.Close();
                     this.Dispose();
 
-                    new Frmvendas().ShowDialog();  //voltando para a tela venda ao finalizar uma venda na tela de pagamentos.
+                    //new Frmvendas().ShowDialog();  //voltando para a tela venda ao finalizar uma venda na tela de pagamentos.
                 }
 
             }

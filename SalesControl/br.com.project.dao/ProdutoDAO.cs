@@ -272,5 +272,66 @@ namespace SalesControl.br.com.project.dao
             }
         }
         #endregion
+
+        #region Método que baixa o estoque
+        public void baixaEstoque(int idproduto, int qtdestoque)
+        {
+            try
+            {
+                // Criar o comando sql
+                string sql = @"update tb_produtos set qtd_estoque = @qtd_estoque where id = @id";
+
+                //organizar e executar o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue(@"@qtd_estoque", qtdestoque);
+                executacmd.Parameters.AddWithValue(@"id", idproduto);
+
+                //abrir conexão e executar o comando
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                conexao.Close();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro " + erro);
+                conexao.Close();
+            }
+        }
+        #endregion
+
+        #region Método que retorna o estoque atual de um  produto
+        public int retornaEstoqueAtual(int idproduto)
+        {
+            try
+            {
+                // comando sql
+                string sql = @"select qtd_estoque from tb_produtos where id = @id";
+
+                int qtd_estoque = 0;
+
+                //organizar o e executr o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue(@"id", idproduto);
+
+                conexao.Open();
+
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    qtd_estoque = rs.GetInt32("qtd_estoque");
+                    conexao.Close();
+                }
+                return qtd_estoque;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro " + erro);
+                return 0;
+            }
+        }
+        #endregion
     }
 }

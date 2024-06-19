@@ -166,7 +166,7 @@ namespace SalesControl.br.com.project.view
                 
             }
         }
-
+       
         private void txtcodigo_TextChanged(object sender, EventArgs e)
         {
 
@@ -193,5 +193,6 @@ namespace SalesControl.br.com.project.view
             }
             
         }
+        
     }
 }

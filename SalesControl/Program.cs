@@ -15,8 +15,8 @@ namespace SalesControl
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmClientes());
             //Application.Run(new FrmFuncionarios());
             //Application.Run(new Frmfornecedores());
