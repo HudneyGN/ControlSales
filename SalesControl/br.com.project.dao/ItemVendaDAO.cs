@@ -3,6 +3,7 @@ using SalesControl.br.com.project.connection;
 using SalesControl.br.com.project.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,48 @@ namespace SalesControl.br.com.project.dao
                 MessageBox.Show("Aconteceu um erro! " + erro);
             }
         }
+        #endregion
+
+        #region Método que lista todos os itens por venda
+        public DataTable listarItensPorVenda(int venda_id)
+        {
+            try
+            {
+                // criar o DataTable e organizar o comando sql 
+                DataTable tabelaItens = new DataTable();
+                string sql = @"select i.id as 'Código',
+		                              p.descricao as 'Descrição',
+		                              i.qtd as 'Quantidade',
+		                              p.preco as 'Preço',
+		                              i.subtotal as 'Sub Total'
+                            from tb_itensvendas as i
+                            join tb_produtos as p 
+                            on (i.produto_id = p.id)
+                            where venda_id = @venda_id";
+
+                //Organizar e executar o comando sql 
+                MySqlCommand executacmdsql = new MySqlCommand(sql, conexao);
+                executacmdsql.Parameters.AddWithValue("@venda_id", venda_id);
+                
+
+                conexao.Open();
+                executacmdsql.ExecuteNonQuery();
+
+
+                // Criar o MySqladapter para preencher os dados no DataTable 
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmdsql);
+                da.Fill(tabelaItens);
+                conexao.Close();
+                return tabelaItens;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro " + erro);
+                conexao.Close();
+                return null;
+            }
+        }
+
         #endregion
     }
 }

@@ -208,6 +208,7 @@ namespace SalesControl.br.com.project.view
             this.label18.Size = new System.Drawing.Size(73, 16);
             this.label18.TabIndex = 35;
             this.label18.Text = "Descrição:";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label21
             // 

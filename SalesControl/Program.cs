@@ -21,8 +21,11 @@ namespace SalesControl
             //Application.Run(new FrmFuncionarios());
             //Application.Run(new Frmfornecedores());
             //Application.Run(new FrmProdutos()); 
-            Application.Run(new Frmvendas());
+            //plication.Run(new Frmvendas());
             //Application.Run(new Frmpagamentos());
+            //Application.Run(new Frmhistorico());
+            //Application.Run(new Frmdetalhe());
+            Application.Run(new Frmlogin());
         }
     }
 }

@@ -172,6 +172,11 @@ namespace SalesControl.br.com.project.view
 
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == 13)

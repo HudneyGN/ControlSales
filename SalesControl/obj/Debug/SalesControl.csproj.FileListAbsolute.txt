@@ -43,7 +43,6 @@ F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.Form1.re
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmFuncionarios.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmfornecedores.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmProdutos.resources
-F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.csproj.CopyComplete
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\Microsoft.Bcl.HashCode.dll
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\Microsoft.EntityFrameworkCore.dll
@@ -81,3 +80,7 @@ F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\MySqlConnector.xml
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\System.Collections.Immutable.xml
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmvendas.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmpagamentos.resources
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmhistorico.resources
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesCon.72CCBE88.Up2Date
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmdetalhe.resources
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmlogin.resources

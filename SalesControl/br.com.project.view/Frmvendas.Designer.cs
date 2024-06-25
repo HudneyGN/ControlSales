@@ -126,11 +126,11 @@ namespace SalesControl.br.com.project.view
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label5.Location = new System.Drawing.Point(9, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 17);
+            this.label5.Size = new System.Drawing.Size(55, 21);
             this.label5.TabIndex = 44;
             this.label5.Text = "Data:";
             // 
@@ -147,11 +147,11 @@ namespace SalesControl.br.com.project.view
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label18.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label18.Location = new System.Drawing.Point(9, 149);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 17);
+            this.label18.Size = new System.Drawing.Size(61, 21);
             this.label18.TabIndex = 42;
             this.label18.Text = "Nome:";
             // 
@@ -170,11 +170,11 @@ namespace SalesControl.br.com.project.view
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label17.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label17.Location = new System.Drawing.Point(9, 86);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 17);
+            this.label17.Size = new System.Drawing.Size(44, 21);
             this.label17.TabIndex = 40;
             this.label17.Text = "CPF:";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -196,6 +196,7 @@ namespace SalesControl.br.com.project.view
             this.groupBox2.Size = new System.Drawing.Size(479, 234);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btnremover
             // 
@@ -227,7 +228,7 @@ namespace SalesControl.br.com.project.view
             // 
             // txtpreco
             // 
-            this.txtpreco.Location = new System.Drawing.Point(111, 128);
+            this.txtpreco.Location = new System.Drawing.Point(120, 129);
             this.txtpreco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpreco.Name = "txtpreco";
             this.txtpreco.Size = new System.Drawing.Size(96, 20);
@@ -235,7 +236,7 @@ namespace SalesControl.br.com.project.view
             // 
             // txtqtd
             // 
-            this.txtqtd.Location = new System.Drawing.Point(111, 170);
+            this.txtqtd.Location = new System.Drawing.Point(120, 171);
             this.txtqtd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtqtd.Name = "txtqtd";
             this.txtqtd.Size = new System.Drawing.Size(96, 20);
@@ -244,7 +245,7 @@ namespace SalesControl.br.com.project.view
             // txtdescricao
             // 
             this.txtdescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdescricao.Location = new System.Drawing.Point(111, 81);
+            this.txtdescricao.Location = new System.Drawing.Point(120, 86);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtdescricao.Name = "txtdescricao";
             this.txtdescricao.Size = new System.Drawing.Size(323, 22);
@@ -253,7 +254,7 @@ namespace SalesControl.br.com.project.view
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(111, 44);
+            this.txtcodigo.Location = new System.Drawing.Point(120, 48);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(139, 20);
@@ -264,44 +265,44 @@ namespace SalesControl.br.com.project.view
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label13.Location = new System.Drawing.Point(21, 170);
+            this.label13.Location = new System.Drawing.Point(6, 170);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 16);
+            this.label13.Size = new System.Drawing.Size(108, 21);
             this.label13.TabIndex = 56;
             this.label13.Text = "Quantidade";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label14.Location = new System.Drawing.Point(21, 129);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 16);
+            this.label14.Size = new System.Drawing.Size(58, 21);
             this.label14.TabIndex = 55;
             this.label14.Text = "Preço:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label3.Location = new System.Drawing.Point(21, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(91, 21);
             this.label3.TabIndex = 53;
             this.label3.Text = "Descrição:";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label23.Location = new System.Drawing.Point(21, 48);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(55, 16);
+            this.label23.Size = new System.Drawing.Size(72, 21);
             this.label23.TabIndex = 51;
             this.label23.Text = "Código:";
             // 
