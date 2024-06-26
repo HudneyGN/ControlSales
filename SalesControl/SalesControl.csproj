@@ -204,6 +204,12 @@
     <Compile Include="br.com.project.view\Frmlogin.Designer.cs">
       <DependentUpon>Frmlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.project.view\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.project.view\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.project.view\Frmpagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     <EmbeddedResource Include="br.com.project.view\Frmlogin.resx">
       <DependentUpon>Frmlogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.project.view\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.project.view\Frmpagamentos.resx">
       <DependentUpon>Frmpagamentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +277,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -283,6 +293,104 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscarvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendariovs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientesvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracoesvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editarvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluirvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedoresvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionariosvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\novovs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagamentosvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtosvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sairvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvarvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendasvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracoes32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundovs.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,6 +26,7 @@ namespace SalesControl
             //Application.Run(new Frmhistorico());
             //Application.Run(new Frmdetalhe());
             Application.Run(new Frmlogin());
+            Application.Run(new FrmMenu());
         }
     }
 }

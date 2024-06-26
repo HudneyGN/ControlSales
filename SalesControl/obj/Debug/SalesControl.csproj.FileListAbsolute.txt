@@ -84,3 +84,4 @@ F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.p
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesCon.72CCBE88.Up2Date
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmdetalhe.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmlogin.resources
+F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmMenu.resources
