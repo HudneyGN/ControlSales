@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCadastroClientes = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +55,7 @@
             this.txthora = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtusuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +75,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(931, 56);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // menuCliente
             // 
@@ -139,6 +142,7 @@
             this.menuCadastroFornecedores.Name = "menuCadastroFornecedores";
             this.menuCadastroFornecedores.Size = new System.Drawing.Size(211, 22);
             this.menuCadastroFornecedores.Text = "Cadastro de Fornecedores";
+            this.menuCadastroFornecedores.Click += new System.EventHandler(this.menuCadastroFornecedores_Click);
             // 
             // menuConsultaFornecedores
             // 
@@ -162,6 +166,7 @@
             this.menuCadastroProdutos.Name = "menuCadastroProdutos";
             this.menuCadastroProdutos.Size = new System.Drawing.Size(189, 22);
             this.menuCadastroProdutos.Text = "Cadastro de Produtoa";
+            this.menuCadastroProdutos.Click += new System.EventHandler(this.menuCadastroProdutos_Click);
             // 
             // tmenuConsultaProdutos
             // 
@@ -183,13 +188,13 @@
             // menuNovaVenda
             // 
             this.menuNovaVenda.Name = "menuNovaVenda";
-            this.menuNovaVenda.Size = new System.Drawing.Size(178, 22);
+            this.menuNovaVenda.Size = new System.Drawing.Size(180, 22);
             this.menuNovaVenda.Text = "Nova Venda";
             // 
             // menuHistoricoVenda
             // 
             this.menuHistoricoVenda.Name = "menuHistoricoVenda";
-            this.menuHistoricoVenda.Size = new System.Drawing.Size(178, 22);
+            this.menuHistoricoVenda.Size = new System.Drawing.Size(180, 22);
             this.menuHistoricoVenda.Text = "Histórico de vendas";
             // 
             // menuconfiguracoes
@@ -230,6 +235,7 @@
             this.statusStrip1.Size = new System.Drawing.Size(931, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripStatusLabel1
             // 
@@ -269,6 +275,12 @@
             this.txtusuario.Size = new System.Drawing.Size(50, 17);
             this.txtusuario.Text = "Hudney";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +294,7 @@
             this.Name = "FrmMenu";
             this.Text = "Menu Principal - Controle de vendas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -309,15 +322,16 @@
         private System.Windows.Forms.ToolStripMenuItem menuSair;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel txtdata;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel txthora;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
-        private System.Windows.Forms.ToolStripStatusLabel txtusuario;
         public System.Windows.Forms.ToolStripMenuItem menuProdutos;
         public System.Windows.Forms.ToolStripMenuItem menuCadastroClientes;
         public System.Windows.Forms.ToolStripMenuItem menucadastroFuncionarios;
         public System.Windows.Forms.ToolStripMenuItem menuCadastroFornecedores;
         public System.Windows.Forms.ToolStripMenuItem menuCadastroProdutos;
+        public System.Windows.Forms.ToolStripStatusLabel txtusuario;
+        public System.Windows.Forms.ToolStripStatusLabel txtdata;
+        private System.Windows.Forms.Timer timer1;
     }
 }

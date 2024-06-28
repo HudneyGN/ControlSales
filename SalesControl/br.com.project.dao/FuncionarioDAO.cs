@@ -261,6 +261,9 @@ namespace SalesControl.br.com.project.dao
                     //abrir menu principal
                     FrmMenu telamenu = new FrmMenu();
 
+                    telamenu.txtusuario.Text = reader.GetString("nome");
+                    //telamenu.txtdata.Text = DateTime.Now.ToShortDateString();
+
                     //Verificar nível de acesso
                     if (nivel.Equals("Administrador"))
                     {
