@@ -9,6 +9,7 @@ using MySql.Data.MySqlClient;
 using SalesControl.br.com.project.model;
 using Mysqlx;
 using System.Data;
+using SalesControl.br.com.project.view;
 
 namespace SalesControl.br.com.project.dao
 {
@@ -224,6 +225,71 @@ namespace SalesControl.br.com.project.dao
             {
                 MessageBox.Show("Erro ao executar o comando sql" + erro);
                 return null;
+            }
+        }
+        #endregion
+
+        #region Método que efetua login
+
+        public bool efetuaLogin(string email, string senha, string nome)
+        {
+            try
+            {
+                // criar o comando sql 
+                string sql = @"select * from tb_funcionarios
+                                        where nome = @nome
+                                        or email = @email
+                                        and senha = @senha";
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue(@"nome", nome);
+                executacmd.Parameters.AddWithValue(@"email", email);
+                executacmd.Parameters.AddWithValue(@"senha", senha);
+
+                conexao.Open();
+                MySqlDataReader reader = executacmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    //MessageBox.Show("Login realizado com sucesso!");
+
+                    //Nível de acesso no sistema
+                    string nivel = reader.GetString("nivel_acesso");
+                    //string nomeDeAcesso = reader.GetString("nome");
+                    MessageBox.Show("Bem vindo " + reader.GetString("nome"));
+
+                    //abrir menu principal
+                    FrmMenu telamenu = new FrmMenu();
+
+                    //Verificar nível de acesso
+                    if (nivel.Equals("Administrador"))
+                    {
+                        telamenu.Show();
+                    }
+                    else if (nivel.Equals("Usuario"))
+                    {
+                        telamenu.menuProdutos.Enabled = false;
+                        telamenu.menuCadastroClientes.Enabled = false;
+                        telamenu.menucadastroFuncionarios.Enabled = false;
+                        telamenu.menuCadastroFornecedores.Enabled = false;
+                        telamenu.menuCadastroProdutos.Enabled = false;
+
+                        telamenu.Show();
+                    }
+                    return true;
+                }
+                else
+                {
+                    // deu alguma coisa errada
+                    MessageBox.Show("Login ou Senha incorreta! ");
+                    return false;
+                }               
+            }
+            catch (Exception erro )
+            {
+                
+                MessageBox.Show("Ocorreu um erro na execução! " + erro);
+                return false;
             }
         }
         #endregion

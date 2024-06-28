@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SalesControl.br.com.project.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,10 +22,19 @@ namespace SalesControl.br.com.project.view
         {
 
         }
-
         private void btnentrar_Click(object sender, EventArgs e)
         {
             //Botão entrar da tela de login
+            string nome = txtemail.Text;
+            string email = txtemail.Text;
+            string senha = txtsenha.Text;
+
+            FuncionarioDAO dao = new FuncionarioDAO();
+
+            if(dao.efetuaLogin(email,senha,nome))
+            {
+                this.Hide();
+            }
         }
     }
 }

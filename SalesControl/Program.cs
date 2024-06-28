@@ -9,6 +9,9 @@ namespace SalesControl
 {
     static class Program
     {
+        /*OBS CRIAR UMA ENTIDADE QUE CRIE OS NÍVEIS DE ACESSO E 
+        CRIAR OS RELACIONAMENTOS COM UMA CHAVE ESTRAGEIRA*/
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -26,7 +29,7 @@ namespace SalesControl
             //Application.Run(new Frmhistorico());
             //Application.Run(new Frmdetalhe());
             Application.Run(new Frmlogin());
-            Application.Run(new FrmMenu());
+            //Application.Run(new FrmMenu());
         }
     }
 }

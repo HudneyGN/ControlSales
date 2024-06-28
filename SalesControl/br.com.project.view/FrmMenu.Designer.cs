@@ -183,13 +183,13 @@
             // menuNovaVenda
             // 
             this.menuNovaVenda.Name = "menuNovaVenda";
-            this.menuNovaVenda.Size = new System.Drawing.Size(180, 22);
+            this.menuNovaVenda.Size = new System.Drawing.Size(178, 22);
             this.menuNovaVenda.Text = "Nova Venda";
             // 
             // menuHistoricoVenda
             // 
             this.menuHistoricoVenda.Name = "menuHistoricoVenda";
-            this.menuHistoricoVenda.Size = new System.Drawing.Size(180, 22);
+            this.menuHistoricoVenda.Size = new System.Drawing.Size(178, 22);
             this.menuHistoricoVenda.Text = "Histórico de vendas";
             // 
             // menuconfiguracoes
@@ -295,16 +295,11 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuCliente;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroClientes;
         private System.Windows.Forms.ToolStripMenuItem menuConsultaClientes;
         private System.Windows.Forms.ToolStripMenuItem menuFuncionarios;
-        private System.Windows.Forms.ToolStripMenuItem menucadastroFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem menuConsultaFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem menuFornecedores;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroFornecedores;
         private System.Windows.Forms.ToolStripMenuItem menuConsultaFornecedores;
-        private System.Windows.Forms.ToolStripMenuItem menuProdutos;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroProdutos;
         private System.Windows.Forms.ToolStripMenuItem tmenuConsultaProdutos;
         private System.Windows.Forms.ToolStripMenuItem menuVenda;
         private System.Windows.Forms.ToolStripMenuItem menuNovaVenda;
@@ -319,5 +314,10 @@
         private System.Windows.Forms.ToolStripStatusLabel txthora;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel txtusuario;
+        public System.Windows.Forms.ToolStripMenuItem menuProdutos;
+        public System.Windows.Forms.ToolStripMenuItem menuCadastroClientes;
+        public System.Windows.Forms.ToolStripMenuItem menucadastroFuncionarios;
+        public System.Windows.Forms.ToolStripMenuItem menuCadastroFornecedores;
+        public System.Windows.Forms.ToolStripMenuItem menuCadastroProdutos;
     }
 }

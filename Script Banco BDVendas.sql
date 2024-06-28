@@ -51,7 +51,7 @@ CREATE TABLE tb_fornecedores (
 /*****************/
 
 /***** TABELA FUNCIONARIOS *****/
-CREATE TABLE tb_funcionarios (
+CREATE TABLE tb_funcionarios(
   id int auto_increment primary key,
   nome varchar(100),
   rg varchar (30),
@@ -114,3 +114,6 @@ CREATE TABLE tb_itensvendas (
 select * from tb_clientes where nome like 'a%';
 
 select * from tb_funcionarios;
+
+/*OBS CRIAR UMA ENTIDADE QUE CRIE OS NÍVEIS DE ACESSO E 
+CRIAR OS RELACIONAMENTOS COM UMA CHAVE ESTRAGEIRA*/
