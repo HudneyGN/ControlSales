@@ -72,7 +72,7 @@
             this.menuconfiguracoes});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(931, 56);
+            this.menuStrip1.Size = new System.Drawing.Size(942, 56);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -87,6 +87,7 @@
             this.menuCliente.Name = "menuCliente";
             this.menuCliente.Size = new System.Drawing.Size(109, 52);
             this.menuCliente.Text = "Clientes";
+            this.menuCliente.Click += new System.EventHandler(this.menuCliente_Click);
             // 
             // menuCadastroClientes
             // 
@@ -112,6 +113,7 @@
             this.menuFuncionarios.Name = "menuFuncionarios";
             this.menuFuncionarios.Size = new System.Drawing.Size(135, 52);
             this.menuFuncionarios.Text = "Funcionários";
+            this.menuFuncionarios.Click += new System.EventHandler(this.menuFuncionarios_Click);
             // 
             // menucadastroFuncionarios
             // 
@@ -125,6 +127,7 @@
             this.menuConsultaFuncionarios.Name = "menuConsultaFuncionarios";
             this.menuConsultaFuncionarios.Size = new System.Drawing.Size(208, 22);
             this.menuConsultaFuncionarios.Text = "Consulta de Funcionários";
+            this.menuConsultaFuncionarios.Click += new System.EventHandler(this.menuConsultaFuncionarios_Click);
             // 
             // menuFornecedores
             // 
@@ -136,6 +139,7 @@
             this.menuFornecedores.Name = "menuFornecedores";
             this.menuFornecedores.Size = new System.Drawing.Size(138, 52);
             this.menuFornecedores.Text = "Fornecedores";
+            this.menuFornecedores.Click += new System.EventHandler(this.menuFornecedores_Click);
             // 
             // menuCadastroFornecedores
             // 
@@ -149,6 +153,7 @@
             this.menuConsultaFornecedores.Name = "menuConsultaFornecedores";
             this.menuConsultaFornecedores.Size = new System.Drawing.Size(211, 22);
             this.menuConsultaFornecedores.Text = "Consulta de Fornecedores";
+            this.menuConsultaFornecedores.Click += new System.EventHandler(this.menuConsultaFornecedores_Click);
             // 
             // menuProdutos
             // 
@@ -160,6 +165,7 @@
             this.menuProdutos.Name = "menuProdutos";
             this.menuProdutos.Size = new System.Drawing.Size(99, 52);
             this.menuProdutos.Text = "Produtos";
+            this.menuProdutos.Click += new System.EventHandler(this.menuProdutos_Click);
             // 
             // menuCadastroProdutos
             // 
@@ -173,6 +179,7 @@
             this.tmenuConsultaProdutos.Name = "tmenuConsultaProdutos";
             this.tmenuConsultaProdutos.Size = new System.Drawing.Size(189, 22);
             this.tmenuConsultaProdutos.Text = "Consultar produtos";
+            this.tmenuConsultaProdutos.Click += new System.EventHandler(this.tmenuConsultaProdutos_Click);
             // 
             // menuVenda
             // 
@@ -184,18 +191,21 @@
             this.menuVenda.Name = "menuVenda";
             this.menuVenda.Size = new System.Drawing.Size(88, 52);
             this.menuVenda.Text = "Vendas";
+            this.menuVenda.Click += new System.EventHandler(this.menuVenda_Click);
             // 
             // menuNovaVenda
             // 
             this.menuNovaVenda.Name = "menuNovaVenda";
             this.menuNovaVenda.Size = new System.Drawing.Size(180, 22);
             this.menuNovaVenda.Text = "Nova Venda";
+            this.menuNovaVenda.Click += new System.EventHandler(this.menuNovaVenda_Click);
             // 
             // menuHistoricoVenda
             // 
             this.menuHistoricoVenda.Name = "menuHistoricoVenda";
             this.menuHistoricoVenda.Size = new System.Drawing.Size(180, 22);
             this.menuHistoricoVenda.Text = "Histórico de vendas";
+            this.menuHistoricoVenda.Click += new System.EventHandler(this.menuHistoricoVenda_Click);
             // 
             // menuconfiguracoes
             // 
@@ -214,12 +224,14 @@
             this.menuSenha.Name = "menuSenha";
             this.menuSenha.Size = new System.Drawing.Size(180, 22);
             this.menuSenha.Text = "Trocar Usuário";
+            this.menuSenha.Click += new System.EventHandler(this.menuSenha_Click);
             // 
             // menuSair
             // 
             this.menuSair.Name = "menuSair";
             this.menuSair.Size = new System.Drawing.Size(180, 22);
             this.menuSair.Text = "Sair";
+            this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
             // statusStrip1
             // 
@@ -230,9 +242,9 @@
             this.txthora,
             this.toolStripStatusLabel5,
             this.txtusuario});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 526);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 573);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(931, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(942, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
@@ -287,7 +299,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(931, 548);
+            this.ClientSize = new System.Drawing.Size(942, 595);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -305,8 +317,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuCliente;
         private System.Windows.Forms.ToolStripMenuItem menuConsultaClientes;
         private System.Windows.Forms.ToolStripMenuItem menuFuncionarios;
@@ -333,5 +343,6 @@
         public System.Windows.Forms.ToolStripStatusLabel txtusuario;
         public System.Windows.Forms.ToolStripStatusLabel txtdata;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

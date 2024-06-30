@@ -146,6 +146,7 @@ namespace SalesControl.br.com.project.view
             txttotal.Text = total.ToString();
 
             MessageBox.Show("Item removido com sucesso!");
+
         }
 
         private void txtcpf_KeyPress(object sender, KeyPressEventArgs e)
@@ -163,10 +164,10 @@ namespace SalesControl.br.com.project.view
                     txtcpf.Clear();
                     txtcpf.Focus();
                 }
-                
+
             }
         }
-       
+
         private void txtcodigo_TextChanged(object sender, EventArgs e)
         {
 
@@ -179,12 +180,13 @@ namespace SalesControl.br.com.project.view
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == 13)
+            if (e.KeyChar == 13)
             {
-                p = pdao.retornaProdutoPorCodigo(Convert.ToInt32(txtcodigo.Text));      
-                
+                p = pdao.retornaProdutoPorCodigo(Convert.ToInt32(txtcodigo.Text));
+
                 // adicionado if dentro de outro para não quebrar a execução por erro 
-                if (p != null) { 
+                if (p != null)
+                {
                     txtdescricao.Text = p.descricao;
                     txtpreco.Text = p.preco.ToString();
                 }
@@ -196,8 +198,8 @@ namespace SalesControl.br.com.project.view
                     txtcodigo.Focus();
                 }
             }
-            
+
         }
-        
+
     }
 }

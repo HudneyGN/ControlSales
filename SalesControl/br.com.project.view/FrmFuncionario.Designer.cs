@@ -728,7 +728,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView tabelaFuncionario;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
@@ -764,12 +763,13 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.MaskedTextBox txtbairro;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TabControl tabFuncionario;
         private System.Windows.Forms.TextBox txtsenha;
         private System.Windows.Forms.ComboBox cbnivel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox txtcpf;
         private System.Windows.Forms.Label label17;
+        public System.Windows.Forms.TabPage tabPage2;
+        public System.Windows.Forms.TabControl tabFuncionario;
     }
 }

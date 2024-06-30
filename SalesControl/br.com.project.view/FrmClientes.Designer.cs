@@ -661,7 +661,6 @@ namespace SalesControl.br.com.project.view
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage tabPage1;
@@ -688,7 +687,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.MaskedTextBox txtbairro;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -702,5 +700,7 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtcomplemento;
+        public System.Windows.Forms.TabControl tabClientes;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }

@@ -616,7 +616,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btneditar;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView tabelaFornecedores;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
@@ -650,6 +649,7 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.MaskedTextBox txtbairro;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TabControl tabFornecedor;
+        public System.Windows.Forms.TabControl tabFornecedor;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }

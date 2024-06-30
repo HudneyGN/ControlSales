@@ -182,7 +182,7 @@ namespace SalesControl.br.com.project.view
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.Location = new System.Drawing.Point(3, 148);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 16);
+            this.label13.Size = new System.Drawing.Size(89, 16);
             this.label13.TabIndex = 46;
             this.label13.Text = "QTD Estoque";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -194,7 +194,7 @@ namespace SalesControl.br.com.project.view
             this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label14.Location = new System.Drawing.Point(14, 105);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 16);
+            this.label14.Size = new System.Drawing.Size(46, 16);
             this.label14.TabIndex = 44;
             this.label14.Text = "Preço:";
             // 
@@ -205,7 +205,7 @@ namespace SalesControl.br.com.project.view
             this.label18.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label18.Location = new System.Drawing.Point(9, 60);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(73, 16);
+            this.label18.Size = new System.Drawing.Size(72, 16);
             this.label18.TabIndex = 35;
             this.label18.Text = "Descrição:";
             this.label18.Click += new System.EventHandler(this.label18_Click);
@@ -217,7 +217,7 @@ namespace SalesControl.br.com.project.view
             this.label21.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label21.Location = new System.Drawing.Point(16, 185);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 16);
+            this.label21.Size = new System.Drawing.Size(77, 16);
             this.label21.TabIndex = 29;
             this.label21.Text = "Fornecedor";
             // 
@@ -228,7 +228,7 @@ namespace SalesControl.br.com.project.view
             this.label22.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label22.Location = new System.Drawing.Point(-138, 126);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(95, 16);
+            this.label22.Size = new System.Drawing.Size(94, 16);
             this.label22.TabIndex = 27;
             this.label22.Text = "Complemento:";
             // 
@@ -239,7 +239,7 @@ namespace SalesControl.br.com.project.view
             this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label23.Location = new System.Drawing.Point(9, 20);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(55, 16);
+            this.label23.Size = new System.Drawing.Size(54, 16);
             this.label23.TabIndex = 24;
             this.label23.Text = "Código:";
             // 
@@ -394,8 +394,6 @@ namespace SalesControl.br.com.project.view
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabProduto;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView tabelaProduto;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
@@ -417,5 +415,7 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbfornecedor;
         private System.Windows.Forms.TextBox txtpreco;
+        public System.Windows.Forms.TabControl tabProduto;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }
