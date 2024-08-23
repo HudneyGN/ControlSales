@@ -170,5 +170,15 @@ namespace SalesControl.br.com.project.view
         {
 
         }
+
+        private void toolStripStatusLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

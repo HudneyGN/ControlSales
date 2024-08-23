@@ -53,9 +53,9 @@
             this.txtdata = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txthora = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtusuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -196,14 +196,14 @@
             // menuNovaVenda
             // 
             this.menuNovaVenda.Name = "menuNovaVenda";
-            this.menuNovaVenda.Size = new System.Drawing.Size(180, 22);
+            this.menuNovaVenda.Size = new System.Drawing.Size(178, 22);
             this.menuNovaVenda.Text = "Nova Venda";
             this.menuNovaVenda.Click += new System.EventHandler(this.menuNovaVenda_Click);
             // 
             // menuHistoricoVenda
             // 
             this.menuHistoricoVenda.Name = "menuHistoricoVenda";
-            this.menuHistoricoVenda.Size = new System.Drawing.Size(180, 22);
+            this.menuHistoricoVenda.Size = new System.Drawing.Size(178, 22);
             this.menuHistoricoVenda.Text = "Histórico de vendas";
             this.menuHistoricoVenda.Click += new System.EventHandler(this.menuHistoricoVenda_Click);
             // 
@@ -222,14 +222,14 @@
             // menuSenha
             // 
             this.menuSenha.Name = "menuSenha";
-            this.menuSenha.Size = new System.Drawing.Size(180, 22);
+            this.menuSenha.Size = new System.Drawing.Size(149, 22);
             this.menuSenha.Text = "Trocar Usuário";
             this.menuSenha.Click += new System.EventHandler(this.menuSenha_Click);
             // 
             // menuSair
             // 
             this.menuSair.Name = "menuSair";
-            this.menuSair.Size = new System.Drawing.Size(180, 22);
+            this.menuSair.Size = new System.Drawing.Size(149, 22);
             this.menuSair.Text = "Sair";
             this.menuSair.Click += new System.EventHandler(this.menuSair_Click);
             // 
@@ -274,24 +274,26 @@
             this.txthora.Size = new System.Drawing.Size(34, 17);
             this.txthora.Text = "22:30";
             // 
-            // toolStripStatusLabel5
-            // 
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(90, 17);
-            this.toolStripStatusLabel5.Text = "Usuário logado:";
-            // 
             // txtusuario
             // 
             this.txtusuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(50, 17);
             this.txtusuario.Text = "Hudney";
+            this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // toolStripStatusLabel5
+            // 
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(90, 17);
+            this.toolStripStatusLabel5.Text = "Usuário logado:";
+            this.toolStripStatusLabel5.Click += new System.EventHandler(this.toolStripStatusLabel5_Click);
             // 
             // FrmMenu
             // 
@@ -334,7 +336,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel txthora;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         public System.Windows.Forms.ToolStripMenuItem menuProdutos;
         public System.Windows.Forms.ToolStripMenuItem menuCadastroClientes;
         public System.Windows.Forms.ToolStripMenuItem menucadastroFuncionarios;
@@ -344,5 +345,6 @@
         public System.Windows.Forms.ToolStripStatusLabel txtdata;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
     }
 }

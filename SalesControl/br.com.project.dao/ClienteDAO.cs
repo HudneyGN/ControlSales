@@ -101,7 +101,7 @@ namespace SalesControl.br.com.project.dao
             catch (Exception erro)
             {
 
-                MessageBox.Show("Erro ao cdastrar cliente: " + erro);
+                MessageBox.Show("Erro ao atualizar cliente: " + erro);
             }
         }
 

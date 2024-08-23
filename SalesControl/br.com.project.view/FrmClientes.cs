@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SalesControl.br.com.project.model;
 using SalesControl.br.com.project.dao;
 
+
 namespace SalesControl.br.com.project.view
 {
     public partial class FrmClientes : Form
@@ -101,6 +102,7 @@ namespace SalesControl.br.com.project.view
             Cliente obj = new Cliente();
 
             //obj.codigo = Convert.ToInt32(txtcodigo.Text);
+
             obj.nome = txtnome.Text;
             obj.rg = txtrg.Text;
             obj.cpf = txtcpf.Text;
@@ -156,7 +158,7 @@ namespace SalesControl.br.com.project.view
 
             tabelaCliente.DataSource = dao.BuscarClientePorNome(nome);
 
-            if(tabelaCliente.Rows.Count == 0)
+            if (tabelaCliente.Rows.Count == 0)
             {
                 tabelaCliente.DataSource = dao.listarCliente();
             }
@@ -272,6 +274,7 @@ namespace SalesControl.br.com.project.view
             Cliente obj = new Cliente();
 
             //obj.codigo = Convert.ToInt32(txtcodigo.Text);
+
             obj.nome = txtnome.Text;
             obj.rg = txtrg.Text;
             obj.cpf = txtcpf.Text;
@@ -288,7 +291,7 @@ namespace SalesControl.br.com.project.view
 
             // criar objeto clienteDAO e chamar o metodo alterar
             ClienteDAO dao = new ClienteDAO();
-            dao.cadastrarCliente(obj);
+            dao.alterarCliente(obj);
 
             //Recarregar o datagridview
             tabelaCliente.DataSource = dao.listarCliente();
@@ -304,32 +307,24 @@ namespace SalesControl.br.com.project.view
 
             tabelaCliente.DataSource = dao.BuscarClientePorNome(nome);
 
-            
+
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             //Botão consultar CEP
-            try
-            {
-                string cep = txtcep.Text;
-                string xml = "https://viacep.com.br/ws/"+cep+"/xml/";
 
-                DataSet dados = new DataSet();
-                dados.ReadXml(xml);
+            string cep = txtcep.Text;
+            string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
 
-                txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
-                txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
-                txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
-                txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
-                cbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+            DataSet dados = new DataSet();
+            dados.ReadXml(xml);
 
-            }
-            catch (Exception)
-            {
-               
-                MessageBox.Show("Endereço não encontrado, por favor digite manualmente");
-            }
+            txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+            txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+            txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+            txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+            cbuf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
         }
 
         private void txtcidade_TextChanged(object sender, EventArgs e)
@@ -372,5 +367,5 @@ namespace SalesControl.br.com.project.view
 
         }
     }
-    
+
 }

@@ -39,7 +39,6 @@ F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\System.Numerics.Vecto
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\Udemy\Projeto Controle de vendas\SalesControl\bin\Debug\System.Threading.Tasks.Extensions.xml
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmClientes.resources
-F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.Form1.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmFuncionarios.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.Frmfornecedores.resources
 F:\Udemy\Projeto Controle de vendas\SalesControl\obj\Debug\SalesControl.br.com.project.view.FrmProdutos.resources

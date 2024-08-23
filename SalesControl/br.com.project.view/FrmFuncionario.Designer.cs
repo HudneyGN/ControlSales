@@ -302,6 +302,7 @@ namespace SalesControl.br.com.project.view
             this.txtsenha.Location = new System.Drawing.Point(630, 67);
             this.txtsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtsenha.Name = "txtsenha";
+            this.txtsenha.PasswordChar = '*';
             this.txtsenha.Size = new System.Drawing.Size(200, 22);
             this.txtsenha.TabIndex = 54;
             // 
