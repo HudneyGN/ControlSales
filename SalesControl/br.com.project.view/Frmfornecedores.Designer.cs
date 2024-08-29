@@ -29,8 +29,6 @@ namespace SalesControl.br.com.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnnovo = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
@@ -70,35 +68,12 @@ namespace SalesControl.br.com.project.view
             this.txtbairro = new System.Windows.Forms.MaskedTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.tabFornecedor = new System.Windows.Forms.TabControl();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedores)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabFornecedor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 86);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de Fornecedores";
             // 
             // btnnovo
             // 
@@ -158,6 +133,7 @@ namespace SalesControl.br.com.project.view
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.tabPage2.Controls.Add(this.tabelaFornecedores);
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.txtpesquisa);
@@ -166,7 +142,7 @@ namespace SalesControl.br.com.project.view
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(963, 462);
+            this.tabPage2.Size = new System.Drawing.Size(981, 462);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -175,13 +151,14 @@ namespace SalesControl.br.com.project.view
             // 
             this.tabelaFornecedores.AllowUserToAddRows = false;
             this.tabelaFornecedores.AllowUserToDeleteRows = false;
+            this.tabelaFornecedores.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabelaFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaFornecedores.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabelaFornecedores.Location = new System.Drawing.Point(3, 130);
+            this.tabelaFornecedores.Location = new System.Drawing.Point(-4, 114);
             this.tabelaFornecedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabelaFornecedores.Name = "tabelaFornecedores";
             this.tabelaFornecedores.ReadOnly = true;
-            this.tabelaFornecedores.Size = new System.Drawing.Size(936, 324);
+            this.tabelaFornecedores.Size = new System.Drawing.Size(967, 352);
             this.tabelaFornecedores.TabIndex = 49;
             this.tabelaFornecedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFornecedores_CellClick);
             this.tabelaFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFuncionario_CellContentClick);
@@ -222,6 +199,7 @@ namespace SalesControl.br.com.project.view
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txtcomplemento);
             this.tabPage1.Controls.Add(this.txtendereco);
@@ -255,7 +233,7 @@ namespace SalesControl.br.com.project.view
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(963, 462);
+            this.tabPage1.Size = new System.Drawing.Size(981, 462);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastrar Fornecedores";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -575,29 +553,40 @@ namespace SalesControl.br.com.project.view
             this.tabFornecedor.Controls.Add(this.tabPage1);
             this.tabFornecedor.Controls.Add(this.tabPage2);
             this.tabFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabFornecedor.Location = new System.Drawing.Point(12, 94);
+            this.tabFornecedor.Location = new System.Drawing.Point(-6, 94);
             this.tabFornecedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabFornecedor.Name = "tabFornecedor";
             this.tabFornecedor.SelectedIndex = 0;
-            this.tabFornecedor.Size = new System.Drawing.Size(971, 492);
+            this.tabFornecedor.Size = new System.Drawing.Size(989, 492);
             this.tabFornecedor.TabIndex = 58;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(239, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(461, 44);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Cadastro de Fornecedor";
             // 
             // Frmfornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SalesControl.Properties.Resources.telalogin;
             this.ClientSize = new System.Drawing.Size(983, 666);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.tabFornecedor);
-            this.Controls.Add(this.panel1);
             this.Name = "Frmfornecedores";
             this.Text = "Cadastro de Fornecedores";
             this.Load += new System.EventHandler(this.Frmfornecedores_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedores)).EndInit();
@@ -605,13 +594,11 @@ namespace SalesControl.br.com.project.view
             this.tabPage1.PerformLayout();
             this.tabFornecedor.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnexcluir;
@@ -651,5 +638,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label23;
         public System.Windows.Forms.TabControl tabFornecedor;
         public System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label1;
     }
 }

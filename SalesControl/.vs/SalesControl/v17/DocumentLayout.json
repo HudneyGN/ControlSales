@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.view\\frmhistorico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmhistorico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.view\\frmpagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmpagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.view\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.model\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.model\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.view\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.dao\\clientedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.dao\\clientedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|f:\\udemy\\projeto controle de vendas\\salescontrol\\br.com.project.dao\\itemvendadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0D70CC-D5BD-4799-B909-98F7442B3DAA}|SalesControl.csproj|solutionrelative:br.com.project.dao\\itemvendadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FrmClientes.cs",
-              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmClientes.cs",
-              "RelativeDocumentMoniker": "br.com.project.view\\FrmClientes.cs",
-              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmClientes.cs",
-              "RelativeToolTip": "br.com.project.view\\FrmClientes.cs",
-              "ViewState": "AQIAAMcAAAAAAAAAAAAAAGsAAAAiAAAA",
+              "Title": "ItemVendaDAO.cs",
+              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.dao\\ItemVendaDAO.cs",
+              "RelativeDocumentMoniker": "br.com.project.dao\\ItemVendaDAO.cs",
+              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.dao\\ItemVendaDAO.cs",
+              "RelativeToolTip": "br.com.project.dao\\ItemVendaDAO.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T02:21:46.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClienteDAO.cs",
-              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.dao\\ClienteDAO.cs",
-              "RelativeDocumentMoniker": "br.com.project.dao\\ClienteDAO.cs",
-              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.dao\\ClienteDAO.cs",
-              "RelativeToolTip": "br.com.project.dao\\ClienteDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T02:21:01.372Z",
+              "WhenOpened": "2024-08-29T23:32:36.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FrmMenu.cs [Design]",
-              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmMenu.cs",
-              "RelativeDocumentMoniker": "br.com.project.view\\FrmMenu.cs",
-              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmMenu.cs [Design]",
-              "RelativeToolTip": "br.com.project.view\\FrmMenu.cs [Design]",
+              "Title": "ItemVenda.cs",
+              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.model\\ItemVenda.cs",
+              "RelativeDocumentMoniker": "br.com.project.model\\ItemVenda.cs",
+              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.model\\ItemVenda.cs",
+              "RelativeToolTip": "br.com.project.model\\ItemVenda.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:12:29.552Z",
+              "WhenOpened": "2024-08-29T23:31:05.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Frmhistorico.cs [Design]",
+              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\Frmhistorico.cs",
+              "RelativeDocumentMoniker": "br.com.project.view\\Frmhistorico.cs",
+              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\Frmhistorico.cs [Design]",
+              "RelativeToolTip": "br.com.project.view\\Frmhistorico.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T23:09:09.479Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Frmlogin.cs [Design]",
-              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\Frmlogin.cs",
-              "RelativeDocumentMoniker": "br.com.project.view\\Frmlogin.cs",
-              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\Frmlogin.cs [Design]",
-              "RelativeToolTip": "br.com.project.view\\Frmlogin.cs [Design]",
+              "Title": "Frmpagamentos.cs [Design]",
+              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\Frmpagamentos.cs",
+              "RelativeDocumentMoniker": "br.com.project.view\\Frmpagamentos.cs",
+              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\Frmpagamentos.cs [Design]",
+              "RelativeToolTip": "br.com.project.view\\Frmpagamentos.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T23:10:22.5Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmClientes.cs [Design]",
-              "DocumentMoniker": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmClientes.cs",
-              "RelativeDocumentMoniker": "br.com.project.view\\FrmClientes.cs",
-              "ToolTip": "F:\\Udemy\\Projeto Controle de vendas\\SalesControl\\br.com.project.view\\FrmClientes.cs [Design]",
-              "RelativeToolTip": "br.com.project.view\\FrmClientes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:09:52.593Z",
+              "WhenOpened": "2024-08-29T23:09:00.5Z",
               "EditorCaption": " [Design]"
             }
           ]

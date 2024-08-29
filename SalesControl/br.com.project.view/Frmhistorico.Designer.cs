@@ -29,9 +29,6 @@ namespace SalesControl.br.com.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnpesquisar = new System.Windows.Forms.Button();
             this.dtFim = new System.Windows.Forms.DateTimePicker();
@@ -39,49 +36,16 @@ namespace SalesControl.br.com.project.view
             this.label3 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabelaHistorico = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaHistorico)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(96, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(465, 55);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Histórico de vendas";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(759, 108);
-            this.panel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " ";
-            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.BackgroundImage = global::SalesControl.Properties.Resources.telalogin;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.btnpesquisar);
             this.groupBox1.Controls.Add(this.dtFim);
             this.groupBox1.Controls.Add(this.dtInicio);
@@ -155,6 +119,7 @@ namespace SalesControl.br.com.project.view
             // 
             this.tabelaHistorico.AllowUserToAddRows = false;
             this.tabelaHistorico.AllowUserToDeleteRows = false;
+            this.tabelaHistorico.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabelaHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaHistorico.Location = new System.Drawing.Point(0, 203);
             this.tabelaHistorico.Name = "tabelaHistorico";
@@ -164,31 +129,39 @@ namespace SalesControl.br.com.project.view
             this.tabelaHistorico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaHistorico_CellClick);
             this.tabelaHistorico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(163, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(373, 44);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Histórico de Vendas";
+            // 
             // Frmhistorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.ClientSize = new System.Drawing.Size(759, 555);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tabelaHistorico);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
             this.Name = "Frmhistorico";
             this.Text = "Histórico de vendas";
             this.Load += new System.EventHandler(this.Frmhistorico_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaHistorico)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtFim;
         private System.Windows.Forms.DateTimePicker dtInicio;
@@ -196,5 +169,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridView tabelaHistorico;
         private System.Windows.Forms.Button btnpesquisar;
+        private System.Windows.Forms.Label label1;
     }
 }

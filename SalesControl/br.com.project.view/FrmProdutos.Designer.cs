@@ -29,9 +29,6 @@ namespace SalesControl.br.com.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabProduto = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtpreco = new System.Windows.Forms.TextBox();
@@ -54,47 +51,12 @@ namespace SalesControl.br.com.project.view
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabProduto.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaProduto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 86);
-            this.panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cadastro de Produtos";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " ";
             // 
             // tabProduto
             // 
@@ -110,6 +72,8 @@ namespace SalesControl.br.com.project.view
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::SalesControl.Properties.Resources.produtos;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.txtpreco);
             this.tabPage1.Controls.Add(this.cbfornecedor);
             this.tabPage1.Controls.Add(this.txtqtd);
@@ -245,6 +209,8 @@ namespace SalesControl.br.com.project.view
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::SalesControl.Properties.Resources.produtos;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.tabelaProduto);
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.txtpesquisa);
@@ -262,6 +228,7 @@ namespace SalesControl.br.com.project.view
             // 
             this.tabelaProduto.AllowUserToAddRows = false;
             this.tabelaProduto.AllowUserToDeleteRows = false;
+            this.tabelaProduto.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabelaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaProduto.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabelaProduto.Location = new System.Drawing.Point(6, 126);
@@ -364,22 +331,35 @@ namespace SalesControl.br.com.project.view
             this.btneditar.UseVisualStyleBackColor = false;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(203, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(407, 44);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Cadastro de Produtos";
+            // 
             // FrmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SalesControl.Properties.Resources.telalogin;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(820, 553);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.tabProduto);
-            this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "FrmProdutos";
             this.Text = "Cadastro de produtos";
             this.Load += new System.EventHandler(this.FrmProdutos_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabProduto.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -387,13 +367,11 @@ namespace SalesControl.br.com.project.view
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaProduto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tabelaProduto;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtpesquisa;
@@ -412,10 +390,10 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbfornecedor;
         private System.Windows.Forms.TextBox txtpreco;
         public System.Windows.Forms.TabControl tabProduto;
         public System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -29,8 +29,6 @@ namespace SalesControl.br.com.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnnovo = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
@@ -78,35 +76,12 @@ namespace SalesControl.br.com.project.view
             this.txtbairro = new System.Windows.Forms.MaskedTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.tabFuncionario = new System.Windows.Forms.TabControl();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFuncionario)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabFuncionario.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(965, 86);
-            this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de Funcionários";
             // 
             // btnnovo
             // 
@@ -166,6 +141,7 @@ namespace SalesControl.br.com.project.view
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.tabPage2.Controls.Add(this.tabelaFuncionario);
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.txtpesquisa);
@@ -184,6 +160,7 @@ namespace SalesControl.br.com.project.view
             // 
             this.tabelaFuncionario.AllowUserToAddRows = false;
             this.tabelaFuncionario.AllowUserToDeleteRows = false;
+            this.tabelaFuncionario.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabelaFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaFuncionario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabelaFuncionario.Location = new System.Drawing.Point(3, 130);
@@ -231,6 +208,7 @@ namespace SalesControl.br.com.project.view
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txtcomplemento);
             this.tabPage1.Controls.Add(this.txtsenha);
@@ -694,24 +672,35 @@ namespace SalesControl.br.com.project.view
             this.tabFuncionario.Size = new System.Drawing.Size(961, 482);
             this.tabFuncionario.TabIndex = 57;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(246, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(478, 44);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Cadastro de Funcionários";
+            // 
             // FrmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SalesControl.Properties.Resources.telalogin;
             this.ClientSize = new System.Drawing.Size(965, 619);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tabFuncionario);
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmFuncionarios";
             this.Text = "Cadastro de Funcionários";
             this.Load += new System.EventHandler(this.FrmFuncionarios_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaFuncionario)).EndInit();
@@ -719,12 +708,11 @@ namespace SalesControl.br.com.project.view
             this.tabPage1.PerformLayout();
             this.tabFuncionario.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnexcluir;
@@ -772,5 +760,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Label label17;
         public System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.TabControl tabFuncionario;
+        private System.Windows.Forms.Label label1;
     }
 }

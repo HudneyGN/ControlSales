@@ -29,9 +29,6 @@ namespace SalesControl.br.com.project.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.grupoBox1 = new System.Windows.Forms.GroupBox();
             this.txtdata = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,51 +53,16 @@ namespace SalesControl.br.com.project.view
             this.label4 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnpagamento = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
             this.grupoBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaprodutos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(257, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 55);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tela de Vendas";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 108);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " ";
-            // 
             // grupoBox1
             // 
+            this.grupoBox1.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.grupoBox1.Controls.Add(this.txtdata);
             this.grupoBox1.Controls.Add(this.label5);
             this.grupoBox1.Controls.Add(this.txtnome);
@@ -181,6 +143,7 @@ namespace SalesControl.br.com.project.view
             // 
             // groupBox2
             // 
+            this.groupBox2.BackgroundImage = global::SalesControl.Properties.Resources.fundo;
             this.groupBox2.Controls.Add(this.btnremover);
             this.groupBox2.Controls.Add(this.btnadd);
             this.groupBox2.Controls.Add(this.txtpreco);
@@ -310,6 +273,7 @@ namespace SalesControl.br.com.project.view
             // 
             this.tabelaprodutos.AllowUserToAddRows = false;
             this.tabelaprodutos.AllowUserToDeleteRows = false;
+            this.tabelaprodutos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabelaprodutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaprodutos.Location = new System.Drawing.Point(496, 125);
             this.tabelaprodutos.Name = "tabelaprodutos";
@@ -320,6 +284,8 @@ namespace SalesControl.br.com.project.view
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::SalesControl.Properties.Resources.vendasvs;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.txttotal);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(497, 517);
@@ -375,23 +341,34 @@ namespace SalesControl.br.com.project.view
             this.btnpagamento.UseVisualStyleBackColor = false;
             this.btnpagamento.Click += new System.EventHandler(this.btnpagamento_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(314, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(306, 44);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Tela de  Vendas";
+            // 
             // Frmvendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SalesControl.Properties.Resources.telalogin;
             this.ClientSize = new System.Drawing.Size(958, 657);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnpagamento);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabelaprodutos);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grupoBox1);
-            this.Controls.Add(this.panel1);
             this.Name = "Frmvendas";
             this.Text = "Tela de Vendas";
             this.Load += new System.EventHandler(this.Frmvendas_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.grupoBox1.ResumeLayout(false);
             this.grupoBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -400,14 +377,11 @@ namespace SalesControl.br.com.project.view
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grupoBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.MaskedTextBox txtcpf;
@@ -432,5 +406,6 @@ namespace SalesControl.br.com.project.view
         private System.Windows.Forms.Button btnpagamento;
         private System.Windows.Forms.TextBox txtdata;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
     }
 }
